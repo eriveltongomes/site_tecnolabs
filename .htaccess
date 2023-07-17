@@ -1,0 +1,324 @@
+##
+# @package    Joomla
+# @copyright  Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.
+# @license    GNU General Public License version 2 or later; see LICENSE.txt
+##
+
+##
+# READ THIS COMPLETELY IF YOU CHOOSE TO USE THIS FILE!
+#
+# The line 'Options +FollowSymLinks' may cause problems with some server configurations.
+# It is required for the use of Apache mod_rewrite, but it may have already been set by
+# your server administrator in a way that disallows changing it in this .htaccess file.
+# If using it causes your site to produce an error, comment it out (add # to the
+# beginning of the line), reload your site in your browser and test your sef urls. If
+# they work, then it has been set by your server administrator and you do not need to
+# set it here.
+##
+
+## No directory listings
+<IfModule autoindex>
+  IndexIgnore *
+</IfModule>
+
+## Suppress mime type detection in browsers for unknown types
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+</IfModule>
+
+## Can be commented out if causes errors, see notes above.
+Options +FollowSymlinks
+Options -Indexes
+
+## Disable inline JavaScript when directly opening SVG files or embedding them with the object-tag
+<FilesMatch "\.svg$">
+  <IfModule mod_headers.c>
+    Header always set Content-Security-Policy "script-src 'none'"
+  </IfModule>
+</FilesMatch>
+
+## Mod_rewrite in use.
+
+RewriteEngine On
+
+## Begin - Rewrite rules to block out some common exploits.
+# If you experience problems on your site then comment out the operations listed
+# below by adding a # to the beginning of the line.
+# This attempts to block the most common type of exploit `attempts` on Joomla!
+#
+# Block any script trying to base64_encode data within the URL.
+RewriteCond %{QUERY_STRING} base64_encode[^(]*\([^)]*\) [OR]
+# Block any script that includes a <script> tag in URL.
+RewriteCond %{QUERY_STRING} (<|%3C)([^s]*s)+cript.*(>|%3E) [NC,OR]
+# Block any script trying to set a PHP GLOBALS variable via URL.
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+# Block any script trying to modify a _REQUEST variable via URL.
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+# Return 403 Forbidden header and show the content of the root home page
+RewriteRule .* index.php [F]
+#
+## End - Rewrite rules to block out some common exploits.
+
+## Begin - Custom redirects
+#
+# If you need to redirect some pages, or set a canonical non-www to
+# www redirect (or vice versa), place that code here. Ensure those
+# redirects use the correct RewriteRule syntax and the [R=301,L] flags.
+#
+## End - Custom redirects
+
+##
+# Uncomment the following line if your webserver's URL
+# is not directly related to physical file paths.
+# Update Your Joomla! Directory (just / for root).
+##
+
+# RewriteBase /
+
+## Begin - Joomla! core SEF Section.
+#
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+#
+# If the requested path and file is not /index.php and the request
+# has not already been internally rewritten to the index.php script
+RewriteCond %{REQUEST_URI} !^/index\.php
+# and the requested path and file doesn't directly match a physical file
+RewriteCond %{REQUEST_FILENAME} !-f
+# and the requested path and file doesn't directly match a physical folder
+RewriteCond %{REQUEST_FILENAME} !-d
+# internally rewrite the request to the index.php script
+RewriteRule .* index.php [L]
+#
+## End - Joomla! core SEF Section.
+
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+deny from 85.215.251.175
+
+RewriteCond %{HTTP_REFERER} !^http://albuquerquecunha.adv.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://albuquerquecunha.adv.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://albuquerquecunha.adv.br.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://albuquerquecunha.adv.br.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://asusdobrasil.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://asusdobrasil.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://asusdobrasil.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://asusdobrasil.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://crboficial.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://crboficial.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://crboficial.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://crboficial.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://crm.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://crm.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://demo.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://demo.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://dupontorel.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://dupontorel.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://dupontorel.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://dupontorel.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://ebrade.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://ebrade.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://ebrade.com.br.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://ebrade.com.br.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://espacodesenvolver.psc.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://espacodesenvolver.psc.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://espacodesenvolver.psc.br.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://espacodesenvolver.psc.br.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://futplay.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://futplay.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://guarupe.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://guarupe.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://mobilidade.tecnotour360.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://mobilidade.tecnotour360.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://realtimeoficial.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://realtimeoficial.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://realtimeoficial.com.br.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://realtimeoficial.com.br.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://solplast.net.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://solplast.net.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://solplast.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://solplast.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://tcc-unidombosco.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://tcc-unidombosco.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://tecnotour360.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://tecnotour360.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://tecnotour360.com.br.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://tecnotour360.com.br.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://travelssia.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://travelssia.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://travelssia.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://travelssia.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.albuquerquecunha.adv.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.albuquerquecunha.adv.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.albuquerquecunha.adv.br.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.albuquerquecunha.adv.br.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.asusdobrasil.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.asusdobrasil.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.asusdobrasil.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.asusdobrasil.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.crboficial.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.crboficial.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.crboficial.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.crboficial.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.crm.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.crm.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.demo.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.demo.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.dupontorel.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.dupontorel.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.dupontorel.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.dupontorel.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.ebrade.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.ebrade.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.ebrade.com.br.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.ebrade.com.br.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.espacodesenvolver.psc.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.espacodesenvolver.psc.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.espacodesenvolver.psc.br.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.espacodesenvolver.psc.br.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.futplay.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.futplay.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.guarupe.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.guarupe.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.mobilidade.tecnotour360.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.mobilidade.tecnotour360.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.realtimeoficial.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.realtimeoficial.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.realtimeoficial.com.br.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.realtimeoficial.com.br.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.solplast.net.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.solplast.net.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.solplast.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.solplast.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.tcc-unidombosco.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.tcc-unidombosco.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.tecnotour360.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.tecnotour360.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.tecnotour360.com.br.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.tecnotour360.com.br.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.travelssia.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.travelssia.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.travelssia.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.travelssia.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://albuquerquecunha.adv.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://albuquerquecunha.adv.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://albuquerquecunha.adv.br.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://albuquerquecunha.adv.br.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://asusdobrasil.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://asusdobrasil.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://asusdobrasil.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://asusdobrasil.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://crboficial.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://crboficial.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://crboficial.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://crboficial.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://crm.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://crm.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://demo.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://demo.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://dupontorel.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://dupontorel.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://dupontorel.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://dupontorel.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://ebrade.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://ebrade.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://ebrade.com.br.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://ebrade.com.br.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://espacodesenvolver.psc.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://espacodesenvolver.psc.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://espacodesenvolver.psc.br.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://espacodesenvolver.psc.br.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://futplay.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://futplay.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://guarupe.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://guarupe.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://mobilidade.tecnotour360.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://mobilidade.tecnotour360.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://realtimeoficial.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://realtimeoficial.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://realtimeoficial.com.br.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://realtimeoficial.com.br.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://solplast.net.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://solplast.net.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://solplast.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://solplast.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://tcc-unidombosco.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://tcc-unidombosco.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://tecnotour360.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://tecnotour360.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://tecnotour360.com.br.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://tecnotour360.com.br.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://travelssia.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://travelssia.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://travelssia.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://travelssia.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.albuquerquecunha.adv.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.albuquerquecunha.adv.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.albuquerquecunha.adv.br.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.albuquerquecunha.adv.br.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.asusdobrasil.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.asusdobrasil.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.asusdobrasil.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.asusdobrasil.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.crboficial.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.crboficial.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.crboficial.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.crboficial.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.crm.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.crm.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.demo.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.demo.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.dupontorel.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.dupontorel.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.dupontorel.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.dupontorel.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.ebrade.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.ebrade.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.ebrade.com.br.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.ebrade.com.br.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.espacodesenvolver.psc.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.espacodesenvolver.psc.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.espacodesenvolver.psc.br.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.espacodesenvolver.psc.br.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.futplay.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.futplay.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.guarupe.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.guarupe.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.mobilidade.tecnotour360.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.mobilidade.tecnotour360.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.realtimeoficial.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.realtimeoficial.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.realtimeoficial.com.br.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.realtimeoficial.com.br.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.solplast.net.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.solplast.net.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.solplast.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.solplast.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.tcc-unidombosco.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.tcc-unidombosco.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.tecnotour360.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.tecnotour360.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.tecnotour360.com.br.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.tecnotour360.com.br.tecnolabs.info$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.travelssia.com.br/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.travelssia.com.br$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.travelssia.tecnolabs.info/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.travelssia.tecnolabs.info$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php74” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php74 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

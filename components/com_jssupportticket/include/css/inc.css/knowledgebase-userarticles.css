@@ -1,0 +1,18 @@
+/* User KnowledgeBase */
+div.js-ticket-downloads-wrp{padding: 0px;}
+div.js-ticket-categories-heading-wrp {float: left;width: 100%;padding: 15px;line-height: initial;}
+div.js-ticket-categories-content {float: left;width: 100%;padding: 20px 0px 0px;}
+div.js-ticket-categories-content div.js-ticket-category-box {float: left;width: calc(13.6% - 10px);margin: 0px 5px;margin-bottom: 10px;}
+div.js-ticket-categories-content div.js-ticket-category-box a.js-ticket-category-title {float: left;text-decoration: none;outline: 0px;width: 100%;}
+div.js-ticket-categories-content div.js-ticket-category-box a.js-ticket-category-title span.js-ticket-category-download-logo {display: inline-block;float: right;padding: 5px;width: 30px;height: 30px;text-align: center;margin: 10px 10px;}
+div.js-ticket-categories-content div.js-ticket-category-box a.js-ticket-category-title span.js-ticket-category-kb-logo {display: inline-block;float: left;height: 100px;width: 100%;position: relative;margin: 0;}
+div.js-ticket-categories-content div.js-ticket-category-box a.js-ticket-category-title span.js-ticket-category-kb-logo img.js-ticket-kb-img {position: absolute;top: 0px;left: 0px;right: 0px;bottom: 0px;margin: auto;max-width: 100%;max-height: 100%;}
+div.js-ticket-categories-content div.js-ticket-category-box a.js-ticket-category-title span.js-ticket-category-name {float: left;padding: 15px 5px;width: 100%;line-height: initial;text-align: center;}
+div.js-ticket-fields-wrp div.js-ticket-form-field-download-search {width: 75%;margin: 0px;}
+div.js-ticket-search-form-btn-wrp-download {width: 25%;padding: 0px;float: left;}
+div.js-ticket-search-form-btn-wrp-download button.js-search-button {float: left;width: calc(100% / 2 - 10px);padding: 12px 0px;height: 50px;text-align: center;margin: 0px 0px 0px 10px;border-radius: 0px;line-height: initial;}
+div.js-ticket-search-form-btn-wrp-download button.js-reset-button {float: left;width: calc(100% / 2 - 10px);padding: 12px 0px;height: 50px;text-align: center;margin: 0px 0px 0px 10px;border-radius: 0px;line-height: initial;}
+    
+
+	select ::-ms-expand {display:none !important;}
+	select{-webkit-appearance:none !important;}

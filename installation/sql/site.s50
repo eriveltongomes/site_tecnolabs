@@ -1,0 +1,162 @@
+/**ABDB**/CREATE TABLE `a1u6r_akeeba_common` (
+  `key` varchar(192) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `value` longtext NOT NULL,
+  PRIMARY KEY (`key`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/**ABDB**/INSERT INTO `a1u6r_akeeba_common`  VALUES 
+('file_fef', '[\"com_akeeba\"]'),
+('fof30', '[\"com_akeeba\",\"file_fef\"]'),
+('stats_lastrun', '1579019241'),
+('stats_siteid', 'f8eba67c4cd08e918382b1dbd0f0932bd9314b38'),
+('stats_siteurl', '5ba1c5f2cf78746f1343251bb2fbc2fe');
+/**ABDB**/CREATE TABLE `a1u6r_ak_storage` (
+  `tag` varchar(255) NOT NULL,
+  `lastupdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `data` longtext,
+  PRIMARY KEY (`tag`(100))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/**ABDB**/CREATE TABLE `a1u6r_ak_stats` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `description` varchar(255) NOT NULL,
+  `comment` longtext,
+  `backupstart` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `backupend` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `status` enum('run','fail','complete') NOT NULL DEFAULT 'run',
+  `origin` varchar(30) NOT NULL DEFAULT 'backend',
+  `type` varchar(30) NOT NULL DEFAULT 'full',
+  `profile_id` bigint(20) NOT NULL DEFAULT '1',
+  `archivename` longtext,
+  `absolute_path` longtext,
+  `multipart` int(11) NOT NULL DEFAULT '0',
+  `tag` varchar(255) DEFAULT NULL,
+  `backupid` varchar(255) DEFAULT NULL,
+  `filesexist` tinyint(3) NOT NULL DEFAULT '1',
+  `remote_filename` varchar(1000) DEFAULT NULL,
+  `total_size` bigint(20) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `idx_fullstatus` (`filesexist`,`status`),
+  KEY `idx_stale` (`status`,`origin`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+/**ABDB**/INSERT INTO `a1u6r_ak_stats`  VALUES 
+('1', 'Backup taken on Sábado, 11 Janeiro 2020 01:14', '', '2020-01-11 01:14:14', '2020-01-11 01:15:36', 'complete', 'backend', 'full', '1', 'site-localhost-20200111-011414utc.zip', 'C:/xampp/htdocs/eiv1/administrator/components/com_akeeba/backup/site-localhost-20200111-011414utc.zip', '0', 'backend', 'id1', '1', NULL, '51330579'),
+('2', 'Backup taken on Sábado, 11 Janeiro 2020 03:22', 'Subir para a produção!', '2020-01-11 03:22:17', '0000-00-00 00:00:00', 'complete', 'backend', 'full', '1', 'site-localhost-20200111-032217utc.zip', 'C:/xampp/htdocs/eiv1/administrator/components/com_akeeba/backup/site-localhost-20200111-032217utc.zip', '0', 'backend', 'id2', '1', NULL, '0'),
+('3', 'Backup taken on Terça, 14 Janeiro 2020 13:27', '', '2020-01-14 16:27:57', '0000-00-00 00:00:00', 'complete', 'backend', 'full', '1', 'site-tecnolabs.info-20200114-132757-03.zip', '/home/storage/a/60/85/tecnolabs1/public_html/administrator/components/com_akeeba/backup/site-tecnolabs.info-20200114-132757-03.zip', '0', 'backend', 'id3', '1', NULL, '0');
+/**ABDB**/CREATE TABLE `a1u6r_ak_profiles` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `description` varchar(255) NOT NULL,
+  `configuration` longtext,
+  `filters` longtext,
+  `quickicon` tinyint(3) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/**ABDB**/INSERT INTO `a1u6r_ak_profiles`  VALUES 
+('1', 'Default Backup Profile', '###AES128###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', '', '1');
+/**ABDB**/CREATE TABLE `a1u6r_aimysitemap_kvstore` (
+  `k` varchar(64) NOT NULL COMMENT 'key',
+  `v` longtext NOT NULL COMMENT 'value',
+  PRIMARY KEY (`k`),
+  UNIQUE KEY `k` (`k`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/**ABDB**/INSERT INTO `a1u6r_aimysitemap_kvstore`  VALUES 
+('crawl-protocol', 's:4:\"http\";'),
+('is-https-only', 'b:0;');
+/**ABDB**/CREATE TABLE `a1u6r_aimysitemap_crawl` (
+  `url` varbinary(767) NOT NULL,
+  `code` smallint(6) NOT NULL DEFAULT '0',
+  `crawled` tinyint(1) NOT NULL DEFAULT '0',
+  `index` tinyint(1) NOT NULL DEFAULT '0',
+  `title` varchar(255) NOT NULL DEFAULT '',
+  `mtime` bigint(20) NOT NULL DEFAULT '0',
+  `lang` char(5) NOT NULL DEFAULT '*',
+  `refs` mediumtext NOT NULL,
+  PRIMARY KEY (`url`),
+  UNIQUE KEY `url` (`url`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/**ABDB**/CREATE TABLE `a1u6r_aimysitemap_broken_links` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `url` varbinary(767) NOT NULL,
+  `srcs` mediumtext NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `url` (`url`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/**ABDB**/CREATE TABLE `a1u6r_aimysitemap` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `url` varbinary(767) NOT NULL,
+  `title` varchar(255) NOT NULL DEFAULT '',
+  `priority` float NOT NULL DEFAULT '0.5',
+  `mtime` bigint(20) NOT NULL DEFAULT '0',
+  `lang` char(5) NOT NULL DEFAULT '*',
+  `state` tinyint(1) NOT NULL DEFAULT '0',
+  `lock` tinyint(1) NOT NULL DEFAULT '0',
+  `changefreq` char(7) NOT NULL DEFAULT 'monthly',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `url` (`url`)
+) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=utf8;
+/**ABDB**/INSERT INTO `a1u6r_aimysitemap`  VALUES 
+('1', '/', 'Inicio | TecnoLabs', '0.5', '1579011873', '*', '1', '0', 'monthly'),
+('2', '/images/clientes/ai-fome.png', 'ai-fome.png', '0.5', '1578715318', '*', '1', '0', 'monthly'),
+('3', '/images/clientes/asus1.png', 'asus1.png', '0.5', '1578715318', '*', '1', '0', 'monthly'),
+('4', '/images/clientes/bluetech.png', 'bluetech.png', '0.5', '1578715318', '*', '1', '0', 'monthly'),
+('5', '/images/clientes/brejaebarba.png', 'brejaebarba.png', '0.5', '1578715318', '*', '1', '0', 'monthly'),
+('6', '/images/clientes/espaco.png', 'espaco.png', '0.5', '1578715318', '*', '1', '0', 'monthly'),
+('7', '/images/clientes/galofiel.png', 'galofiel.png', '0.5', '1578715318', '*', '1', '0', 'monthly'),
+('8', '/images/clientes/limpex.png', 'limpex.png', '0.5', '1578715319', '*', '1', '0', 'monthly'),
+('9', '/images/clientes/magalu.png', 'magalu.png', '0.5', '1578715319', '*', '1', '0', 'monthly'),
+('10', '/images/clientes/society.png', 'society.png', '0.5', '1578757784', '*', '1', '0', 'monthly'),
+('11', '/images/clientes/socio-gipao.png', 'socio-gipao.png', '0.5', '1578757687', '*', '1', '0', 'monthly'),
+('12', '/images/frontend/automacao.png', 'automacao.png', '0.5', '1578962985', '*', '1', '0', 'monthly'),
+('13', '/images/frontend/contato-comercial.png', 'contato-comercial.png', '0.5', '1578757429', '*', '1', '0', 'monthly'),
+('14', '/images/frontend/contato-financeiro.png', 'contato-financeiro.png', '0.5', '1578757230', '*', '1', '0', 'monthly'),
+('15', '/images/frontend/contato-suporte.png', 'contato-suporte.png', '0.5', '1578757014', '*', '1', '0', 'monthly'),
+('16', '/images/frontend/front-end.png', 'front-end.png', '0.5', '1578715323', '*', '1', '0', 'monthly'),
+('17', '/images/frontend/logo-cabecalho.png', 'logo-cabecalho.png', '0.5', '1578715323', '*', '1', '0', 'monthly'),
+('18', '/images/frontend/logo-original.png', 'logo-original.png', '0.5', '1578715324', '*', '1', '0', 'monthly'),
+('19', '/images/frontend/sobre.png', 'sobre.png', '0.5', '1578715324', '*', '1', '0', 'monthly'),
+('20', '/images/portfolio/advogado.jpg', 'advogado.jpg', '0.5', '1578715327', '*', '1', '0', 'monthly'),
+('21', '/images/portfolio/ai--fome.jpg', 'ai--fome.jpg', '0.5', '1578758705', '*', '1', '0', 'monthly'),
+('22', '/images/portfolio/brejaebarba.jpg', 'brejaebarba.jpg', '0.5', '1578715328', '*', '1', '0', 'monthly'),
+('23', '/images/portfolio/clinica.jpg', 'clinica.jpg', '0.5', '1578715329', '*', '1', '0', 'monthly'),
+('24', '/images/portfolio/mapos.jpg', 'mapos.jpg', '0.5', '1578715330', '*', '1', '0', 'monthly'),
+('25', '/images/portfolio/siscond.jpg', 'siscond.jpg', '0.5', '1578715330', '*', '1', '0', 'monthly'),
+('26', '/images/portfolio/site-espacodesenvolver.jpg', 'site-espacodesenvolver.jpg', '0.5', '1578715331', '*', '1', '0', 'monthly'),
+('27', '/images/portfolio/teste.jpg', 'teste.jpg', '0.5', '1578715332', '*', '1', '0', 'monthly'),
+('28', '/images/portfolio/vendas.png', 'vendas.png', '0.5', '1578715332', '*', '1', '0', 'monthly'),
+('29', '/images/spsimpleportfolio/advogados/advogado_600x400.jpg', 'advogado_600x400.jpg', '0.5', '1578715375', '*', '1', '0', 'monthly'),
+('30', '/images/spsimpleportfolio/advogados/advogado_600x600.jpg', 'advogado_600x600.jpg', '0.5', '1578715375', '*', '1', '0', 'monthly'),
+('31', '/images/spsimpleportfolio/ai-fome/ai--fome_600x400.jpg', 'ai--fome_600x400.jpg', '0.5', '1578758824', '*', '1', '0', 'monthly'),
+('32', '/images/spsimpleportfolio/ai-fome/ai--fome_600x600.jpg', 'ai--fome_600x600.jpg', '0.5', '1578758825', '*', '1', '0', 'monthly'),
+('33', '/images/spsimpleportfolio/ai-fome/ai--fome_600x800.jpg', 'ai--fome_600x800.jpg', '0.5', '1578758825', '*', '1', '0', 'monthly'),
+('34', '/images/spsimpleportfolio/breja-e-barba/brejaebarba_600x400.jpg', 'brejaebarba_600x400.jpg', '0.5', '1578758874', '*', '1', '0', 'monthly'),
+('35', '/images/spsimpleportfolio/breja-e-barba/brejaebarba_600x600.jpg', 'brejaebarba_600x600.jpg', '0.5', '1578758874', '*', '1', '0', 'monthly'),
+('36', '/images/spsimpleportfolio/clinica-hospital/clinica_600x400.jpg', 'clinica_600x400.jpg', '0.5', '1578715378', '*', '1', '0', 'monthly'),
+('37', '/images/spsimpleportfolio/clinica-hospital/clinica_600x600.jpg', 'clinica_600x600.jpg', '0.5', '1578715378', '*', '1', '0', 'monthly'),
+('38', '/images/spsimpleportfolio/condominio/siscond_600x400.jpg', 'siscond_600x400.jpg', '0.5', '1578715380', '*', '1', '0', 'monthly'),
+('39', '/images/spsimpleportfolio/condominio/siscond_600x600.jpg', 'siscond_600x600.jpg', '0.5', '1578715380', '*', '1', '0', 'monthly'),
+('40', '/images/spsimpleportfolio/ordem-de-servico/mapos_600x400.jpg', 'mapos_600x400.jpg', '0.5', '1578715394', '*', '1', '0', 'monthly'),
+('41', '/images/spsimpleportfolio/ordem-de-servico/mapos_600x600.jpg', 'mapos_600x600.jpg', '0.5', '1578715395', '*', '1', '0', 'monthly'),
+('42', '/images/spsimpleportfolio/ordem-de-servico/mapos_600x800.jpg', 'mapos_600x800.jpg', '0.5', '1578715395', '*', '1', '0', 'monthly'),
+('43', '/images/spsimpleportfolio/site-espaco-desenvolver/site-espacodesenvolver_600x400.jpg', 'site-espacodesenvolver_600x400.jpg', '0.5', '1578715402', '*', '1', '0', 'monthly'),
+('44', '/images/spsimpleportfolio/site-espaco-desenvolver/site-espacodesenvolver_600x600.jpg', 'site-espacodesenvolver_600x600.jpg', '0.5', '1578715402', '*', '1', '0', 'monthly'),
+('45', '/images/spsimpleportfolio/site-galo-fiel/teste_600x400.jpg', 'teste_600x400.jpg', '0.5', '1578715408', '*', '1', '0', 'monthly'),
+('46', '/images/spsimpleportfolio/site-galo-fiel/teste_600x600.jpg', 'teste_600x600.jpg', '0.5', '1578715409', '*', '1', '0', 'monthly'),
+('47', '/images/spsimpleportfolio/site-galo-fiel/teste_600x800.jpg', 'teste_600x800.jpg', '0.5', '1578715409', '*', '1', '0', 'monthly'),
+('48', '/images/spsimpleportfolio/vendas/vendas_600x400.png', 'vendas_600x400.png', '0.5', '1578715415', '*', '1', '0', 'monthly'),
+('49', '/images/spsimpleportfolio/vendas/vendas_600x600.png', 'vendas_600x600.png', '0.5', '1578715415', '*', '1', '0', 'monthly'),
+('50', '/index.php', 'Inicio | TecnoLabs', '0.5', '1579011918', '*', '1', '0', 'monthly'),
+('51', '/index.php/empresa/servicos', 'Serviços | TecnoLabs', '0.5', '1579011923', '*', '1', '0', 'monthly'),
+('52', '/index.php/empresa/sobre-nos', 'Sobre Nós | TecnoLabs', '0.5', '1579011931', '*', '1', '0', 'monthly'),
+('53', '/index.php/fale-conosco', 'Contato | TecnoLabs', '0.5', '1579011938', '*', '1', '0', 'monthly'),
+('54', '/index.php/orcamento', 'Orçamento', '0.5', '1579011947', '*', '1', '0', 'monthly'),
+('55', '/index.php/orcamento-online', 'Orçamento Online', '0.5', '1579011952', '*', '1', '0', 'monthly'),
+('56', '/index.php/portfolio/trabalhos', 'Trabalhos', '0.5', '1579011957', '*', '1', '0', 'monthly'),
+('57', '/index.php/portfolio/trabalhos/item/1-site-espaco-desenvolver', 'Espaço Desenvolver', '0.5', '1579011970', '*', '1', '0', 'monthly'),
+('58', '/index.php/portfolio/trabalhos/item/13-breja-e-barba', 'Breja e Barba', '0.5', '1579011976', '*', '1', '0', 'monthly'),
+('59', '/index.php/portfolio/trabalhos/item/14-vendas', 'Vendas', '0.5', '1579011981', '*', '1', '0', 'monthly'),
+('60', '/index.php/portfolio/trabalhos/item/15-ai-fome', 'Ai Fome', '0.5', '1579012004', '*', '1', '0', 'monthly'),
+('61', '/index.php/portfolio/trabalhos/item/2-site-galo-fiel', 'Galo Fiel', '0.5', '1579012010', '*', '1', '0', 'monthly'),
+('62', '/index.php/portfolio/trabalhos/item/3-condominio', 'Condomínio', '0.5', '1579012016', '*', '1', '0', 'monthly'),
+('63', '/index.php/portfolio/trabalhos/item/4-ordem-de-servico', 'Ordem de Serviço', '0.5', '1579012039', '*', '1', '0', 'monthly'),
+('64', '/index.php/portfolio/trabalhos/item/5-clinica-hospital', 'Clínica / Hospital', '0.5', '1579012065', '*', '1', '0', 'monthly'),
+('65', '/index.php/portfolio/trabalhos/item/6-advogados', 'Advogados', '0.5', '1579012071', '*', '1', '0', 'monthly'),
+('66', '/index.php/prazos', 'Prazos', '0.5', '1579012095', '*', '1', '0', 'monthly'),
+('67', '/index.php/suporte-tecnico', 'Suporte Técnico', '0.5', '1579012112', '*', '1', '0', 'monthly');

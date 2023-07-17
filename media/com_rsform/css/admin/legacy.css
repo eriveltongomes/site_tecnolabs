@@ -1,0 +1,25 @@
+table#componentPreview tr:first-child td.order > span:first-child,
+table#componentPreview tr:last-child td.order > span + span {
+	visibility: hidden;
+}
+
+table.adminrsform {
+	border: solid 1px #d5d5d5;
+	border-collapse: collapse;
+	margin-bottom: 15px;
+	margin-top: -10px;
+}
+table.adminrsform th {
+	font-size: 11px;
+	padding: 6px 2px 4px 4px;
+	text-align: left;
+	height: 25px;
+	color: #000;
+	background-repeat: repeat;
+}
+table.adminrsform td {
+	padding: 3px;
+}
+tr.rsform_page td {
+	border-bottom: dashed 2px #000 !important;
+}

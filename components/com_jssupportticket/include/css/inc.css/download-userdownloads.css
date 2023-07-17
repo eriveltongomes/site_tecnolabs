@@ -1,0 +1,47 @@
+div#jsst-header-main-wrapper {display: inline-block;width: 100%;float: left;}
+div#jsst-header {display: inline-block;width: 100%;position: relative;padding: 10px;float: left;}
+div#jsst-header div#jsst-tabs-wrp {float: left;width: 100%;}
+div#jsst-header span.jsst-header-tab {display: inline-block;margin-right: 7px;}
+div#jsst-header span.jsst-header-tab a.js-cp-menu-link {display: inline-block;padding: 14px 25px;text-decoration: none;outline: 0;text-align: center;border-radius: 3px;line-height: initial;}
+div.js-ticket-top-search-wrp {float: left;width: 100%;border: none;}
+div.js-ticket-search-heading-wrp {float: left;width: 100%;}
+div.js-ticket-search-heading-wrp div.js-ticket-heading-left {float: left;width: 70%;padding: 15px 10px; line-height: initial; font-weight: 400;font-size: 16px;}
+div.js-ticket-download-wrapper {float: left;width: 100%;padding: 10px;}
+div.js-ticket-top-search-wrp {float: left;width: 100%;}
+div.js-ticket-search-fields-wrp {float: left;width: 100%;padding: 10px;}
+form#adminForm {float: left;width: 100%;margin:0px;}
+div.js-ticket-fields-wrp {float: left;width: 100%;}
+div.js-ticket-fields-wrp div.js-ticket-form-field {float: left;width: calc(100% / 2 - 10px);margin: 0px 5px;position: relative;}
+div.js-ticket-fields-wrp div.js-ticket-form-field-download-search {width: 75%;margin: 0px;}
+div.js-ticket-fields-wrp div.js-ticket-form-field input.js-ticket-field-input {float: left;width: 100%;border-radius: 0px;padding: 10px;line-height: initial;height: 50px;text-transform: capitalize;}
+/*div.js-ticket-fields-wrp div.js-ticket-form-field input.js-ticket-field-input {background-color: #fff;border: 1px solid #d1d1d1;color: #636363;}*/
+div.js-ticket-search-form-btn-wrp {float: left;width: 100%;padding: 0px 5px;margin-top: 10px;}
+div.js-ticket-search-form-btn-wrp-download {width: 25%;padding: 0px;margin-top: 0px;}
+div.js-ticket-search-form-btn-wrp-download button.js-search-button {float: left;width: calc(100% / 2 - 10px);padding: 12px 0px;text-align: center;margin: 0px 0px 0px 10px;border-radius: 0px;line-height: initial;}
+div.js-ticket-search-form-btn-wrp-download button.js-reset-button {float: left;width: calc(100% / 2 - 10px);padding: 12px 0px;text-align: center;margin: 0px 0px 0px 10px;border-radius: 0px;line-height: initial;}
+div.jsst-main-up-wrapper input, div.jsst-main-up-wrapper button, div.jsst-main-up-wrapper select, div.jsst-main-up-wrapper textarea {font-family: inherit;font-size: inherit;line-height: inherit;}
+div.js-ticket-downloads-wrp {padding: 0px;}
+div.js-ticket-downloads-wrp div.js-ticket-downloads-heading-wrp {float: left;width: 100%;padding: 15px;line-height: initial;}
+div.js-ticket-knowledgebase-details {float: left;width: 100%;padding: 15px;}
+div.js-ticket-knowledgebase-details {float: left;width: 100%;padding: 15px 0;line-height: 1.8;}
+div.js-ticket-downloads-content {float: left;width: 100%;padding: 20px 0px;}
+div.js-ticket-downloads-content div.js-ticket-download-box {float: left;width: 100%;padding: 10px;box-shadow: 0 8px 6px -6px #dedddd;margin-bottom: 10px;}
+div.js-ticket-downloads-content div.js-ticket-download-box div.js-ticket-download-left a.js-ticket-download-title {float: left;width: 100%;padding: 9px;cursor: pointer;line-height: initial;text-decoration: none;}
+div.js-ticket-downloads-content div.js-ticket-download-box div.js-ticket-download-left a.js-ticket-download-title img.js-ticket-download-icon {float: left;}
+div.js-ticket-downloads-content div.js-ticket-download-box div.js-ticket-download-left a.js-ticket-download-title span.js-ticket-download-name {width: calc(100% - 60px);display: inline-block;padding: 10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+/*popup*/
+div#js-ticket-main-popup {position: fixed;top: 50%;left: 50%;width: 60%;max-height: 70%;padding-top: 0px;z-index: 99999;overflow-y: auto;overflow-x: hidden;transform: translate(-50%,-50%);}
+div#js-ticket-main-black-background {position: fixed;width: 100%;height: 100%;background: rgba(0,0,0,0.7);z-index: 998;top: 0px;left: 0px;}
+span#js-ticket-popup-title {width: 100%;display: inline-block;padding: 20px;font-size: 20px;line-height: initial;}
+span#js-ticket-popup-close-button {position: absolute;top: 18px;right: 18px;width: 25px;height: 25px;}
+div#js-ticket-main-content {float: left;width: 100%;padding: 0px 25px;}
+div.js-ticket-download-description {float: left;width: 100%;padding: 0px 0px 15px;line-height: 1.8;}
+#js-ticket-main-popup div.js-ticket-download-btn {padding: 8px 0;text-align: right;}
+div.js-ticket-download-btn {float: left;width: 100%;text-align: center;padding: 14px 10px;text-align: right;}
+div.js-ticket-download-btn button.js-ticket-download-btn-style {display: inline-block;padding: 10px 25px;border-radius: unset;font-weight: unset;line-height: initial;}
+div.js-ticket-download-btn button.js-ticket-download-btn-style:hover {color: #2b2b2b;border: 1px solid #2b2b2b;}
+div#js-ticket-main-downloadallbtn {float: left;width: 100%;padding: 0px 25px 20px;}
+#js-ticket-main-popup #js-ticket-main-downloadallbtn .js-ticket-download-btn {text-align: left;}
+div#js-ticket-main-downloadallbtn div.js-ticket-download-btn a.js-ticket-download-btn-style {background-color: #4f6df5;color: #ffffff;border-color: #4f6df5;}
+div#js-ticket-main-downloadallbtn div.js-ticket-download-btn a.js-ticket-download-btn-style:hover {border-color: #2b2b2b;}
+div.js-ticket-download-btn a.js-ticket-download-btn-style:hover {color: #2b2b2b;border: 1px solid #2b2b2b;}

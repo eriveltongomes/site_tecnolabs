@@ -1,0 +1,10 @@
+div#jsst-header {display: inline-block;width: 100%;position: relative;padding: 10px;float: left;}
+div#jsst-header div#jsst-tabs-wrp {float: left;width: 100%;}
+div#jsst-header span.jsst-header-tab {display: inline-block;margin-right: 7px;}
+div#jsst-header span.jsst-header-tab a.js-cp-menu-link {display: inline-block;padding: 14px 25px;text-decoration: none;outline: 0;text-align: center;border-radius: 3px;line-height: initial;}
+div.js-ticket-top-search-wrp {float: left;width: 100%;border: none;}
+div.js-ticket-heading-wrp {float: left;width: 100%;}
+div.js-ticket-heading-wrp {color: #2b2b2b}
+div.js-ticket-knowledgebase-wrapper {padding: 0px;}
+div.js-ticket-announcement-top-search-wrp {float: left;width: 100%;}
+

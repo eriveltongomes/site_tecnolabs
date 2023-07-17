@@ -1,0 +1,21 @@
+/* Form Role */
+	div#js-tk-formwrapper {width: 100%;float: left;}
+	form#adminForm {padding: 10px;}
+	div#js-tk-formwrapper div.js-form-title {float: left;width: 100%;margin-bottom: 5px;}
+	div#js-tk-formwrapper div.js-form-title  label{display: inline;}
+	div#js-tk-formwrapper div.js-form-value {float: left;width: 100%;}
+	div#js-tk-formwrapper div.js-form-value input.js-ticket-form-input {float: left;width: 100%;border-radius: 0px;padding: 10px;line-height: initial; height: 45px;margin-bottom: 0px;}
+    div.js-ticket-form-btn-wrp{float: left;width:calc(100% - 20px);margin: 0px 10px;text-align: center;padding: 18px 0px 10px 0px;margin-top: 30px;}
+	div.js-ticket-form-btn-wrp input.js-ticket-save-button{padding: 15px 10px;margin-right: 10px;min-width: 120px;border-radius: 0px;}
+	div.js-ticket-form-btn-wrp a.js-ticket-cancel-button{display: inline-block; padding: 14px 10px;margin-right: 10px;min-width: 120px;border-radius: 0px;text-decoration:none !important; outline:0px !important; }
+    /* permissons listing */
+	div.js-per-wrapper{width: 100%; float: left;margin-top: 5px;}
+	div.js-per-subheading{float: left;width: 100%;padding: 18px 15px 12px;line-height: initial; margin-bottom: 20px;margin-top: 15px;}
+	div.js-per-subheading span.head-text{float: left;}
+	div.js-per-subheading span.head-checkbox{float: right;}
+	div.js-per-subheading span.head-checkbox input{/*vertical-align: top;*/margin:0;}
+	div.js-per-subheading span.head-checkbox label {display: inline-block; padding-left: 15px;}
+	div.js-per-wrapper div.js-per-data{float: left;width: calc(100% / 3 - 10px);padding: 10px;line-height: initial;margin: 0px 4px 7px;}
+	div.js-per-wrapper div.js-per-data label{display: inline-block; padding-left: 10px;}
+	div.js-per-wrapper div.js-per-data input{display: inline-block;vertical-align: top;}
+	.js-ticket-zero-padding{padding: 0px;}

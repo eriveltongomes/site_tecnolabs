@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <field name="opimage" filter="raw" type="textarea" default="modules/mod_whatsapppremium/assets/images/avatar_female.png" label="MOD_WHATSAPPPREMIUM_FIELD_OPIMG" description="MOD_WHATSAPPPREMIUM_FIELD_OPIMG_DESC" />
+    <field name="optitle" filter="raw" type="textarea" default="Product Support" label="MOD_WHATSAPPPREMIUM_FIELD_OPTITLE" description="MOD_WHATSAPPPREMIUM_FIELD_OPTITLE_DESC" />
+	<field name="opname" filter="raw" type="textarea" default="Jane Doe" label="MOD_WHATSAPPPREMIUM_FIELD_OPNAME" description="MOD_WHATSAPPPREMIUM_FIELD_OPNAME_DESC" />
+	<field name="opstate" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_WHATSAPPPREMIUM_FIELD_OPSTATE" description="MOD_WHATSAPPPREMIUM_FIELD_OPSTATE_DESC">
+		<option value="1">MOD_WHATSAPPPREMIUM_ONLINE</option>
+		<option value="0">MOD_WHATSAPPPREMIUM_OFFLINE</option>
+	</field>
+	<field showon="opstate:0" filter="raw" name="opofftext" type="textarea" rows="5" default="Online from 10:00 - 17:00 GMT+7" label="MOD_WHATSAPPPREMIUM_FIELD_OPOFFTEXT" description="MOD_WHATSAPPPREMIUM_FIELD_OPOFFTEXT_DESC" />
+	<field showon="opstate:1" filter="raw" name="opphone" type="text" default="15551234567" label="MOD_WHATSAPPPREMIUM_FIELD_OPPHONE" description="MOD_WHATSAPPPREMIUM_FIELD_OPPHONE_DESC" />
+	<field showon="opstate:1" filter="raw" name="ophitext" type="textarea" rows="5" default="Hi, i have a question about your products!" label="MOD_WHATSAPPPREMIUM_FIELD_OPHITEXT" description="MOD_WHATSAPPPREMIUM_FIELD_OPHITEXT_DESC" />
+</form>

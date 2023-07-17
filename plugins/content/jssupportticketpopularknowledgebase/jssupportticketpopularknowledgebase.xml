@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade"> 
+	<name>JS Support Ticket Popular Knowledge Base</name>
+	<author>Joom Sky</author>
+	<creationDate>June 11, 2015</creationDate>
+	<copyright>Copyright (C) 2010. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>ahmad@joomsky.com</authorEmail>
+	<authorUrl>www.joomsky.com</authorUrl>
+	<version>1.0</version>
+	<description>Usage {jssupportticketknowledgebase title="JS Support Ticket Knowledge Base" showtitle="show" titlebackgroundcolor="#333333" titletextcolor="#FFFFFF" viewall="show" maxrecord="10" recordperrow="2" textoverflow="ellipsis" Itemid="102"}. Show Popular Knowledge base from JS Support Ticket database. </description>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="title" type="text" default="Knowledge Base" label="Title" description="Title" />
+				<field name="showtitle" type="radio" default="1" label="Show Title" description="Show title for your Knowledgebase module">
+					<option value="1">Show</option>
+					<option value="0">Hide</option>
+				</field>
+				<field name="titlebackgroundcolor" type="color" default="#000000" label="Title Background Color" description="Change background color for title" />				
+				<field name="titlecolor" type="color" default="#FFFFFF" label="Title Color" description="Change color of title" />				
+				<field name="viewall" type="radio" default="1" label="Show View All Button" description="Show / hide view all button">
+					<option value="1">Show</option>
+					<option value="0">Hide</option>
+				</field>
+				<field name="maxrecord" type="text" default="10" label="Max Record" description="Show maximum number of records" />
+				<field name="recordperrow" type="list" default="1" label="Records Per Row" description="Show number of records per row">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</field>
+				<field name="textoverflow" type="list" default="2" label="Text Overflow" description="Show text in one line and ellipsis if overflow or show in multilines">
+					<option value="1">Text Overflow</option>
+					<option value="2">Text Ellipsis</option>
+				</field>
+				<field name="Itemid" type="text" default="" label="ItemID" description="ItemID for your module" />
+			</fieldset>
+		</fields>
+	</config>
+	<files>
+		<filename plugin="jssupportticketpopularknowledgebase">jssupportticketpopularknowledgebase.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_jssupportticketpopularknowledgebase.ini</language>
+	</languages>
+	
+</extension>

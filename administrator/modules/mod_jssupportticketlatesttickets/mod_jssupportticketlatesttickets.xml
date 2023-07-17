@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.0"  client="administrator" method="upgrade">
+	<name>JS Support Ticket Latest Tickets</name>
+	<author>Joom Sky</author>
+	<creationDate>June 11, 2015</creationDate>
+	<copyright>(C) 2010. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>ahmad@joomsky.com</authorEmail>
+	<authorUrl>www.joomsky.com</authorUrl>
+	<version>1.0.0</version>
+	<description>Show Latest Tickets form JS Support Ticket database.</description>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			</fieldset>
+		</fields>
+	</config>
+	<files>
+		<filename module="mod_jssupportticketlatesttickets">mod_jssupportticketlatesttickets.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_jssupportticketlatesttickets.ini</language>
+	</languages>
+</extension>

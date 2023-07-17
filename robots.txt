@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+sitemap:https://www.tecnolabs.info/sitemap.xml
+sitemap:https://www.tecnolabs.info/ror.xml

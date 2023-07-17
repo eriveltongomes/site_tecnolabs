@@ -1,0 +1,2 @@
+[06-Feb-2023 17:31:49 America/Sao_Paulo] PHP Warning:  Invalid argument supplied for foreach() in /domains4/tecnolab/public_html/administrator/components/com_acym/helpers/update.php on line 701
+[14-May-2023 21:19:16 America/Sao_Paulo] PHP Notice:  Undefined property: SpsimpleportfolioTableTag::$language in /domains4/tecnolab/public_html/administrator/components/com_spsimpleportfolio/tables/tag.php on line 44

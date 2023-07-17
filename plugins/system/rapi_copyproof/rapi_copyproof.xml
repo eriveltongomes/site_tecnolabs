@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" client="site" type="plugin" group="system" method="upgrade">
+    <name>System - Rapi CopyProof</name>
+    <author>RapiCode</author>
+    <creationDate>2017</creationDate>
+    <copyright>Copyright (C) 2017 All rights reserved.</copyright>
+    <license>GNU General Public License</license>
+    <authorEmail>info@rapicode.com</authorEmail>
+	<version>1.2</version>
+    <description>Rapi CopyProof - If you want to protect your website’s content from theft, it’s the best for you</description>
+    <files>
+        <filename plugin="rapi_copyproof">rapi_copyproof.php</filename>
+		<filename>index.html</filename>
+    </files>
+    <config><fields name="params"><fieldset name="basic">
+		<field name="menus" type="menuitem" label="Load on Menus" multiple="true" description="if empty at all the menus to be displayed" />
+        <field name="restrict_groups" type="usergrouplist" multiple="true" label="Restricted User Groups" description="List of restricted User Groups" />
+		<field name="right_click" type="radio" default="1" class="btn-group btn-group-yesno" label="Disable Right Click" description="">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="ctrl" type="radio" default="1" class="btn-group btn-group-yesno" label="Disable ctrl + *" description="print - save page - view source , ...">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="drag" type="radio" default="1" class="btn-group btn-group-yesno" label="Disable Mouse Drag" description="image , link , ...">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="select" type="radio" default="1" class="btn-group btn-group-yesno" label="Disable Select" description="mouse select , 2 click , 3 click , ...">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+		<field name="f12" type="radio" default="1" class="btn-group btn-group-yesno" label="Disable F12" description="">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+    </fieldset>
+    </fields></config>
+	<updateservers>
+    	<server type="extension" name="rapi_copyproof" priority="1">http://www.rapicode.com/update/rapi_copyproof.xml</server>
+    </updateservers>
+</extension>

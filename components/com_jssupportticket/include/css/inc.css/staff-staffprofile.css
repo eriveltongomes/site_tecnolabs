@@ -1,0 +1,38 @@
+/* My Profile */
+    div.js-ticket-profile-wrp{font-size: 16px;}
+	div.js-ticket-downloads-wrp{float: left;width: 100%;margin-top: 17px;}
+	div.js-ticket-downloads-wrp div.js-ticket-downloads-heading-wrp{float: left;width: 100%;padding: 15px 10px;font-size: 16px;}
+	div.js-ticket-profile-wrp{float: left;width: 100%;margin-top: 30px;}
+	div.js-ticket-profile-wrp div.js-ticket-profile-left{float: left;width: 200px;text-align: center;}
+	div.js-ticket-profile-wrp div.js-ticket-profile-left div.js-ticket-user-img-wrp{float: left; width: 100%;height: 200px;position: relative;}
+	div.js-ticket-profile-wrp div.js-ticket-profile-left div.js-ticket-user-img-wrp img.profile-image{position: absolute;top: 0;bottom: 0;left: 0;right: 0;margin: auto;max-width: 100%;max-height:100%;}
+	div.js-ticket-profile-wrp div.js-ticket-profile-right{float: left;width: calc(100% - 200px - 20px); margin:0px 0px 0px 15px;}
+	div.js-ticket-from-field{position: relative;}
+	img.js-ticket-profile-form-img{position:absolute; top:5px; right:12px; bottom:0;cursor:pointer;}
+	div#showhidemouseover{position: relative;display: inline-block;text-align: center;min-width: 170px;}
+	label.js-ticket-file-upload-label{display: block;padding:11px 0px; border-radius: 2px;transition: background .3s; font-weight: unset;}
+	span.js-ticket-submit-btn{position: relative;display: inline-block;margin-top: 30px;text-align: center;margin-bottom: 15px;min-width: 170px;}
+	input.js-ticket-file-upload-label{display: inline-block;padding: 11px 0px;border-radius: 2px;transition: background .3s;font-weight: unset;margin: auto;width: 100% !important;}
+	input.js-ticket-upload-input{position: absolute;left: 0;top: 0;right: 0;bottom: 0;font-size: 1;width: 0;height: 42px !important;opacity: 0;cursor: pointer;width: 100% !important;}
+	span.js-ticket-input-field-style{display: inline-block;float: left;width: 100%;padding: 11px 5px;}
+	textarea{border-radius: unset !important;}
+	textarea#signature{width: 100%;}
+	div.js-ticket-add-form-wrapper{float: left;width: 100%;}
+	div.js-ticket-add-form-wrapper div.js-ticket-from-field-wrp{float: left;width: calc(100% / 2 - 10px);margin: 0px 5px; margin-bottom: 20px; }
+	div.js-ticket-add-form-wrapper div.js-ticket-from-field-wrp.js-ticket-from-field-wrp-full-width{float: left;width: calc(100% / 1 - 10px); margin-bottom: 20px; }
+	div.js-ticket-add-form-wrapper div.js-ticket-from-field-wrp div.js-ticket-from-field-title{float: left;width: 100%;margin-bottom: 5px;text-transform: capitalize;}
+	div.js-ticket-add-form-wrapper div.js-ticket-from-field-wrp div.js-ticket-from-field{float: left;width: 100%;}
+	div.js-ticket-add-form-wrapper div.js-ticket-from-field-wrp div.js-ticket-from-field input.js-ticket-form-field-input{margin-bottom: 0px;float: left;width: 100%;border-radius: 0px;padding: 11px 10px;min-height: 42px;}
+	div.js-ticket-add-form-wrapper div.js-ticket-from-field-wrp div.js-ticket-from-field select#categoryid{float: left;width: 100%;border-radius: 0px;background: url(../../images/selecticon.png) 96% / 4% no-repeat;}
+	div.js-ticket-add-form-wrapper div.js-ticket-from-field-wrp div.js-ticket-from-field select.js-ticket-form-field-select{float: left;width: 100%;border-radius: 0px;background: url(../../images/selecticon.png) 96% / 4% no-repeat #eee;}
+	div.js-ticket-add-form-wrapper div.js-ticket-from-field-wrp div.js-ticket-from-field.js-ticket-from-field-wrp-full-width select#status{margin-bottom: 0px;float: left;width: 100%;border-radius: 0px;background: url(../../images/selecticon.png) 98% / 2% no-repeat;}
+	div.js-ticket-add-form-wrapper div.js-ticket-from-field-wrp.js-ticket-from-field-wrp-full-width div.js-ticket-from-field select#status{float: left;width: 100%;border-radius: 0px;background: url(../../images/selecticon.png) 98% / 2% no-repeat;}
+	div.js-ticket-add-form-wrapper div.js-ticket-from-field-wrp div.js-ticket-from-field select#status{float: left;width: 100%;border-radius: 0px;background: url(../../images/selecticon.png) 96% / 4% no-repeat ;}
+	div.js-ticket-add-form-wrapper div.js-ticket-from-field-wrp div.js-ticket-from-field select#parentid{float: left;width: 100%;border-radius: 0px;background: url(../../images/selecticon.png) 96% / 4% no-repeat ;}
+	div.js-ticket-form-btn-wrp{float: left;width:calc(100% - 20px);margin: 0px 10px;text-align: center;padding: 25px 0px 10px 0px;}
+	div.js-ticket-form-btn-wrp input.js-ticket-save-button{padding: 20px 10px;margin-right: 10px;min-width: 120px;border-radius: 0px;}
+	div.js-ticket-form-btn-wrp a.js-ticket-cancel-button{display: inline-block; padding: 14px 10px;margin-right: 10px;min-width: 120px;border-radius: 0px;}
+	span.help-block{font-size:11px;}
+	span.help-block{color:red;}
+	span.js-ticket-submit-btn input.js-ticket-file-upload-label {background-color: #2b2b2b;border: 1px solid #2b2b2b;color: #ffffff;}
+    span.js-ticket-submit-btn input.js-ticket-file-upload-label {display: block;padding: 11px 0px;border-radius: 2px;transition: background .3s;font-weight: unset;}

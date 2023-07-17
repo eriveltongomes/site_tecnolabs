@@ -1,0 +1,40 @@
+/* Categories */
+	div.js-ticket-department-wrapper{float: left;width: 100%;padding: 10px}
+	div.js-ticket-top-search-wrp{float: left;width: 100%;}
+	div.js-ticket-search-heading-wrp{padding: 10px;background-color: #f5f2f5;color: #2b2b2b;}
+	div.js-ticket-search-heading-wrp div.js-ticket-heading-left{float: left;width: 70%;padding: 15px 10px; line-height: initial; font-weight: 400;font-size: 16px;}
+	div.js-ticket-search-heading-wrp div.js-ticket-heading-right{float: left;width: 30%;text-align: right;}
+	div.js-ticket-search-heading-wrp div.js-ticket-heading-right a.js-ticket-add-download-btn{display: inline-block;padding: 15px 25px;text-decoration: none;outline: 0px;line-height: initial;}
+    div.js-ticket-search-search-form-btn-wrp button {float: left;width: calc(100% / 2 - 10px);padding: 7px;text-align: center;margin: 0px 5px;border-radius: unset;line-height: initial;height: 50px;}
+	div.js-ticket-search-heading-wrp div.js-ticket-heading-right a.js-ticket-add-download-btn span.js-ticket-add-img-wrp{display: inline-block;margin-right: 5px;}
+	div.js-ticket-search-heading-wrp div.js-ticket-heading-right a.js-ticket-add-download-btn span.js-ticket-add-img-wrp img{vertical-align: text-bottom;}
+	div.js-ticket-search-fields-wrp{float: left;width: 100%;padding: 10px 5px;}
+	form#jssupportticketform{float: left;width: 100%;}
+	div.js-ticket-fields-wrp{float: left;width: 75%;}
+	div.js-ticket-fields-wrp div.js-ticket-form-field{float: left; width: calc(100% / 2 - 10px);margin: 0px 5px;position: relative;}
+	div.js-ticket-fields-wrp div.js-ticket-form-field select.js-ticket-select-field{min-height: 50px;border-radius: 0px;margin: 0px;width: 100%;}
+	div.js-ticket-fields-wrp div.js-ticket-form-field-download-search{width:75%;margin: 0px;}
+	div.js-ticket-fields-wrp div.js-ticket-form-field input.js-ticket-field-input{float: left;width: 100%;border-radius: 0px; padding: 10px; min-height: 50px;}
+	div.js-ticket-search-form-btn-wrp{float: left;width: 25%; padding: 0px;}
+	div.js-ticket-search-form-btn-wrp-download {width:25%;padding: 0px;margin-top: 0px;}
+	div.js-ticket-search-form-btn-wrp button.js-search-button{float: left;width: calc(100% / 2 - 10px); padding: 7px;text-align: center;margin: 0px 5px; border-radius: 0px; min-height: 50px; }
+	div.js-ticket-search-form-btn-wrp button.js-reset-button{float: left;width: calc(100% / 2 - 10px); padding: 7px;text-align: center; margin: 0px 5px; border-radius: 0px; min-height: 50px;}
+	div.js-ticket-download-content-wrp{float: left;width: 100%;margin-top: 30px;}
+	div.js-ticket-table-wrp{float: left;width: 100%;padding: 0;}
+	div.js-ticket-table-wrp div.js-ticket-table-header{float: left;width: 100%;margin-bottom: 15px;}
+	div.js-ticket-table-wrp div.js-ticket-table-header div.js-ticket-table-header-col{padding: 15px;text-align: center;line-height: initial;}
+	div.js-ticket-table-wrp div.js-ticket-table-header div.js-ticket-table-header-col:first-child{text-align: left;}
+	div.js-ticket-table-body{float: left;width: 100%;}
+	div.js-ticket-table-body div.js-ticket-data-row{float: left;width: 100%;margin-bottom: 15px;}
+	div.js-ticket-table-body div.js-ticket-data-row div.js-ticket-table-body-col{padding: 18px;text-align: center;line-height: initial;}
+	div.js-ticket-table-body div.js-ticket-data-row div.js-ticket-table-body-col.js-ticket-first-child{text-align: left !important;padding: 15px;}
+	div.js-ticket-table-body div.js-ticket-data-row div.js-ticket-table-body-col:last-child{padding: 15px;}
+	span.js-ticket-display-block{display: none;}
+	div.js-ticket-table-body div.js-ticket-data-row div.js-ticket-table-body-col .js-ticket-title-anchor {display: inline-block;text-decoration: none;height: 25px;width: 95%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+    div.js-ticket-table-body div.js-ticket-data-row div.js-ticket-table-body-col a.js-tk-button {padding: 6px 2px 10px 1px;margin: 0 2px;}
+    div.js-ticket-table-body div.js-ticket-data-row div.js-ticket-table-body-col a.tk_set_edit_text {padding: 6px 0px 10px 2px;margin: 0 2px;}
+    /* Listing delete action css */
+	div#js-suredelete{display: none;position: relative;float: left;width: 100%;height: 100%;border-radius: 0px;font-size: 13px;padding: 14px;}
+	div#js-suredelete a{cursor: pointer; text-decoration: none; padding: 7px 10px; line-height: 7px;}
+	div#js-suredelete a.js-tk-suredelete-btn{position: absolute;right: 118px;top: 10px;text-align: center;padding: 13px;text-decoration:none !important; outline:0px !important; }
+	div#js-suredelete a.js-tk-canceldelete-btn{position: absolute;right: 10px;top: 10px;text-align: center;padding: 13px;text-decoration:none !important; outline:0px !important; }

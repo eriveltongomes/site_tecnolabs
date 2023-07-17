@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5.0"
+	client="site"
+	method="upgrade">
+		<name>mod_whatsapppremium</name>
+        <author>MarvelExtensions</author>
+        <creationDate>November 2018</creationDate>
+        <copyright>MarvelExtensions.com</copyright>
+        <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+        <authorEmail>support@marvelextensions.com</authorEmail>
+        <authorUrl>http://www.MarvelExtensions.com</authorUrl>
+        <version>1.0.3</version>
+<description>
+<![CDATA[
+<div style="padding:1%;background:#fff;color:#444;font-size:14px;text-align:center;border: 2px solid #444;">
+<p>
+<img src="../modules/mod_whatsapppremium/assets/images/logo.png">
+<h1 style="font-size:26px; color: #fff; background: #444; padding: 1%;">Whatsapp Premium</h1>
+<h1 style="font-size:26px; color: #fff; background: #2f96b4; padding: 1%;">Version 1.0.3</h1>
+<h2>Marvel Extensions!</h2>
+<p>
+Premium Joomla&reg;! Extensions
+</p>
+<p>
+Bug-free, mobile-friendly, effectively working Joomla Extensions together with a great support 
+</p>
+<p style="margin-bottom:20px;">
+If you have any questions or need support, don't hesitate to visit our support desk.
+<br /><br />
+<a class="btn btn-info" target="_blank" href="http://www.marvelextensions.com/support/create-a-new-ticket.html">Visit Marvel Extensions Support</a>
+</p>
+<hr />
+</div>
+]]>		
+</description>
+        <files>
+                <filename module="mod_whatsapppremium">mod_whatsapppremium.php</filename>
+				<filename>helper.php</filename>
+                <filename>index.html</filename>
+				<folder>language</folder>
+				<folder>assets</folder>
+				<folder>tmpl</folder>						
+        </files>
+		<languages>
+            	<language tag="en-GB">language/en-GB/en-GB.mod_whatsapppremium.ini</language>
+				<language tag="en-GB">language/en-GB/en-GB.mod_whatsapppremium.sys.ini</language>
+		</languages>
+	<updateservers>
+		<server type="extension" priority="1" name="WhatsAppPremium Update">https://www.marvelextensions.com/updates/mod_whatsapppremium_update.xml</server>
+	</updateservers>		
+	<config>
+		<fields name="params">
+			<!-- basic settings -->
+			<fieldset name="modbasic" label="MOD_WHATSAPPPREMIUM_FIELDSETLABEL_BASICSETTINGS">
+				<field name="jqueryload" type="radio" class="btn-group btn-group-yesno" default="0" label="MOD_WHATSAPPPREMIUM_FIELD_JQUERYLOAD" description="MOD_WHATSAPPPREMIUM_FIELD_JQUERYLOAD_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="selecttemplate" type="list" default="default" label="MOD_WHATSAPPPREMIUM_FIELD_SELECTTEMPLATE" description="MOD_WHATSAPPPREMIUM_FIELD_SELECTTEMPLATE_DESC">
+					<option value="absolute">MOD_WHATSAPPPREMIUM_ABSOLUTE</option>
+					<option value="incontent">MOD_WHATSAPPPREMIUM_INCONTENT</option>
+				</field>
+				<field showon="selecttemplate:absolute" name="note1" type="note" class="alert alert-info" label="MOD_WHATSAPPPREMIUM_ABSOLUTENOTE" description="MOD_WHATSAPPPREMIUM_ABSOLUTENOTE_DESC" />				
+				<field showon="selecttemplate:incontent" name="note2" type="note" class="alert alert-info" label="MOD_WHATSAPPPREMIUM_INCONTENTNOTE" description="MOD_WHATSAPPPREMIUM_INCONTENTNOTE_DESC" />				
+				<field showon="selecttemplate:absolute" name="absolutepos" type="list" default="default" label="MOD_WHATSAPPPREMIUM_FIELD_ABSOLUTEPOS" description="MOD_WHATSAPPPREMIUM_FIELD_ABSOLUTEPOS_DESC">
+					<option value="absoluteright">MOD_WHATSAPPPREMIUM_BOTTOMRIGHT</option>
+					<option value="absoluteleft">MOD_WHATSAPPPREMIUM_BOTTOMLEFT</option>
+				</field>			
+			</fieldset>
+			<!-- design settings -->
+			<fieldset name="desset" label="MOD_WHATSAPPPREMIUM_FIELDSETLABEL_DESSETTINGS">
+				<!-- absolute selected -->
+				<field showon="selecttemplate:absolute" name="desctext" type="textarea" rows="8" cols="25" filter="raw" default="Hi! Click one of our representatives below to chat on WhatsApp or send us email to &lt;a href=&quot;mailto:support@marvelextensions.com&quot;&gt;support@marvelextensions.com&lt;/a&gt;" label="MOD_WHATSAPPPREMIUM_DESCTEXT" description="MOD_WHATSAPPPREMIUM_DESCTEXT_DESC" />
+				<field showon="selecttemplate:absolute" name="descbg" type="color" default="#303030" label="MOD_WHATSAPPPREMIUM_DESCBG" description="MOD_WHATSAPPPREMIUM_DESCBG_DESC" />
+				<field showon="selecttemplate:absolute" name="desctextcolor" type="color" default="#FFFFFF" label="MOD_WHATSAPPPREMIUM_DESCTC" description="MOD_WHATSAPPPREMIUM_DESCTC_DESC" />
+				<field showon="selecttemplate:absolute" name="buttontext" type="textarea" default="Chat with us on WhatsApp" label="MOD_WHATSAPPPREMIUM_BUTTONTEXT" description="MOD_WHATSAPPPREMIUM_BUTTONTEXT_DESC" />
+				<field showon="selecttemplate:absolute" name="buttonbg" type="color" default="#303030" label="MOD_WHATSAPPPREMIUM_BUTTONBG" description="MOD_WHATSAPPPREMIUM_BUTTONBG_DESC" />
+				<field showon="selecttemplate:absolute" name="buttontextcolor" type="color" default="#FFFFFF" label="MOD_WHATSAPPPREMIUM_BUTTONTC" description="MOD_WHATSAPPPREMIUM_BUTTONTC_DESC" />
+				<field showon="selecttemplate:incontent" name="inbuttontext" type="textarea" default="Chat with us on WhatsApp" label="MOD_WHATSAPPPREMIUM_BUTTONTEXT" description="MOD_WHATSAPPPREMIUM_BUTTONTEXT_DESC" />
+				<field showon="selecttemplate:incontent" name="inbuttonbg" type="color" default="#303030" label="MOD_WHATSAPPPREMIUM_BUTTONBG" description="MOD_WHATSAPPPREMIUM_BUTTONBG_DESC" />
+				<field showon="selecttemplate:incontent" name="inbuttontextcolor" type="color" default="#FFFFFF" label="MOD_WHATSAPPPREMIUM_BUTTONTC" description="MOD_WHATSAPPPREMIUM_BUTTONTC_DESC" />
+				<field showon="selecttemplate:incontent" name="inbuttonwidth" type="text" default="250px" label="MOD_WHATSAPPPREMIUM_BUTTONWIDTH" description="MOD_WHATSAPPPREMIUM_BUTTONWIDTH_DESC" />
+				<field showon="selecttemplate:incontent" name="inbuttonpadding" type="text" default="5px 10px 5px 10px" label="MOD_WHATSAPPPREMIUM_BUTTONPAD" description="MOD_WHATSAPPPREMIUM_BUTTONPAD_DESC" />
+				<field showon="selecttemplate:incontent" name="inbuttonradius" type="text" default="5px 5px 5px 5px" label="MOD_WHATSAPPPREMIUM_BUTTONRADIUS" description="MOD_WHATSAPPPREMIUM_BUTTONRADIUS_DESC" />
+				
+			</fieldset>			
+			<!-- operator settings -->
+			<fieldset name="opset" label="MOD_WHATSAPPPREMIUM_FIELDSETLABEL_OPSETTINGS">
+				<field showon="selecttemplate:absolute" name="opnote1" type="note" class="alert alert-info" label="MOD_WHATSAPPPREMIUM_OPNOTE" description="MOD_WHATSAPPPREMIUM_OPNOTE_DESC" />
+				<field showon="selecttemplate:absolute" name="waoperators" type="subform" formsource="modules/mod_whatsapppremium/assets/forms/waoperators.xml" multiple="true" label="MOD_WHATSAPPPREMIUM_OP" description="MOD_WHATSAPPPREMIUM_OP_DESC" />			
+				<field showon="selecttemplate:incontent" name="opnote2" type="note" class="alert alert-info" label="MOD_WHATSAPPPREMIUM_OPNOTE2" description="MOD_WHATSAPPPREMIUM_OPNOTE2_DESC" />
+				<field showon="selecttemplate:incontent" name="waoperator" type="subform" max="1" formsource="modules/mod_whatsapppremium/assets/forms/waoperator.xml" multiple="true" label="MOD_WHATSAPPPREMIUM_OP" description="MOD_WHATSAPPPREMIUM_OP_DESC" />
+			</fieldset>
+			<fieldset name="advanced">
+			<!--
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+				/>
+			-->
+				<field
+					name="moduleclass_sfx"
+					type="textarea"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+					rows="3"
+				/>
+
+				<field
+					name="cache"
+					type="list"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+					default="0"
+					filter="integer"
+					>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="number"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+					default="0"
+					filter="integer"
+				/>
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid"
+					>
+					<option value="itemid"></option>
+				</field>
+			</fieldset>			
+		</fields>
+	</config>
+</extension>

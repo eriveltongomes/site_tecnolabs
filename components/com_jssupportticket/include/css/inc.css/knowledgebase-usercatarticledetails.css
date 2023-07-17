@@ -1,0 +1,13 @@
+div.js-ticket-knowledgebase-wrapper {float: left;width: 100%;padding: 10px;}
+div.js-ticket-knowledgebase-top-search-wrp {float: left;width: 100%;}
+div.js-ticket-search-heading-wrp {float: left;width: 100%;}
+div.js-ticket-search-heading-wrp div.js-ticket-heading-left {float: left;width: 70%;padding: 15px 10px; line-height: initial; font-weight: 400;font-size: 16px;}
+div.js-ticket-knowledgebase-details {float: left;width: 100%;padding: 15px 0;line-height: 1.8;}
+div.js-ticket-downloads-content div.js-ticket-download-box div.js-ticket-knowledgebase-download-left {float: left;width: 80%;}
+div.js-ticket-downloads-content div.js-ticket-download-box div.js-ticket-knowledgebase-download-left a.js-ticket-download-title {float: left;width: 100%;padding: 9px;cursor: pointer;text-decoration: none;}
+div.js-ticket-downloads-content div.js-ticket-download-box div.js-ticket-knowledgebase-download-left a.js-ticket-download-title img.js-ticket-download-icon {float: left;}
+div.js-ticket-downloads-content div.js-ticket-download-box div.js-ticket-knowledgebase-download-left a.js-ticket-download-title span.js-ticket-download-name {width: calc(100% - 60px);display: inline-block;padding: 10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+div.js-ticket-downloads-content div.js-ticket-download-box div.js-ticket-download-right {float: left;width: 20%;}
+div.js-ticket-download-btn {float: left;width: 100%;text-align: right;padding: 7px 10px;}
+div.js-ticket-download-btn a.js-ticket-download-btn-style {display: inline-block;padding: 10px 20px;border-radius: unset;font-weight: unset;text-decoration: none;outline: 0;line-height: initial;}
+div.js-ticket-downloads-wrp{padding: 10px;}

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "tecnolabs",
+  "private_key_id": "9967aa0d2e5df5a959c0ad5d3d96290302ff7626",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDPm+khGnF0vOys\nbxiQqkXKaiO4JB9nLlzBUEX7l7ar+hi4ZdVuD4KqSwrOWmA/wEnRtvsiQLNbM0GH\n6VjSjNwPQxFoYFwRUpl2R99mE2zLzNW8S34Z0OyouT6a96WHp0csSTk1+UP8z5+C\nZnxdfI8rNhrooGqi/ncOQiGPZK0VeP+H8s25yoB7KLvisHtZFrAEo9pLF93NxBpO\nqKNx3NPT/OcB/Yf2iBHf9KMqhsFmdK+tu+scx6sW9RMyASMtE49Re29sae/nDpLX\naBUhOPw0kQnRBIehwNVHLX/URNg04waqHcC/u3afMUMDBAZ9tA5ZVn5D6YDrkexN\nYzkoCiJhAgMBAAECggEAARDP6II/pWep+7h8JOO1XRCoeVe44CtOmUTOn6gFrV5A\nv8tQxi5i42m0Qvb3fBNKM7cJpOlV7Fqj+DEJSlckEulbULzAIzwANvlfaQlR7V3C\nRfuxmHuEN/lftA0f8L1Z7AUeE7gBXn4Qt6M72aFf1SMLbkDSzE5z5S8vZ7puqaPT\nhD8Ckf56AlyolHE67UJdhwcJoPkggvW7N5URupT5/ZnRQHZ6Xo4MttwzwncV4fIB\nNdujEe2EJ9NTk9jhY7pnPbXEfJcRxypA6+bbgT0m1VxlWr/2/fVW+Z+wMk8+Hv0c\nAW1dUdMzeI1mLjf0t5qljGwSudUuX7TkdPeWt6S6AQKBgQD8yRXNknVLE1+kH49A\n9RYIbcUb/GzUmaM1EVgB+g6fUYdcRmhYZoBcXpGknZRD6P9ipEMYBtnJzpn3jnNJ\nt02HHpbsHPRDogMEH4+AOeWaTX4fuhK5Ny2mRG+zPdMdG/MBMAqajjoTgzlG9jju\nSZKv66pztffu2I6y1zUZ1dfsYQKBgQDSP8IyWguayWutvf66B7N7Xgg3jqhiVtR+\n7wxts3tMNSzQRL3oREE+bq/t2Reb4dnq82B68888CBcS2bwjDN4lOGEkFOR5CLB1\ndrA/ylAd84z70HQDIBpJB+V7vBaDWH6jl1QxJ57jTw21nestFcVQ9rMJ++fCJjcP\nnoZySC32AQKBgCe3jHZtMYKnO5q03rQtDdYrMRIRmiPZM9xtqi89U7jSfXsREOn6\nyOY6cZW0sIvu+tlLx8LpqKRdkrFjr1eAtmypcLsOXY6W0PR/5PMXpayVymA/wxtY\nwRJjpE08RIRJVOf13WSlPhi8wG4W16EQ7Dw5weFGUPs1CU6uI4i4oaFhAoGAOykX\nsuVliIuO0he5Oo16MoeWFlP9C5bVOlZ3j9LGKf54eq4tJdM27KNmu62vl/xoPlV3\nW4GJWaIJJBPCfbZcN+ryYp3CYFBSnurj0z9RZewnSqAwVMTOwKgJKdUWHKVlFRE6\n7o3whpOzDty91TTgDdUtMe0BHL92FN4NhNDMpgECgYBohvjkDy+wHdKPY++390NV\nqUGDNLlQRTJwIa3dvn4XkUovsgmdYMT1Lx/zyBYWtrxT1M8d1vm91rwZsBlM+aId\ny88mTTsVicNBSvap/9StEBSVQKewS3cihU4jCatBkVfi+JKLxVbjxIuZCC0ZIO3z\n2nCiRhzoim+oH643wgoVdA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "rsseo-search-console@tecnolabs.iam.gserviceaccount.com",
+  "client_id": "115152272204057916031",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/rsseo-search-console%40tecnolabs.iam.gserviceaccount.com"
+}

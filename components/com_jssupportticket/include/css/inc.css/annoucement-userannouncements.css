@@ -1,0 +1,8 @@
+/* User Annoucement */
+    div.js-ticket-fields-wrp div.js-ticket-form-field-download-search {width: 75%;margin: 0px;}
+    div.js-ticket-search-form-btn-wrp-download {width: 25%;padding: 0px;float: left;}
+    div.js-ticket-search-form-btn-wrp-download button.js-search-button {float: left;width: calc(100% / 2 - 10px);padding: 12px 0px;height: 50px;text-align: center;margin: 0px 0px 0px 10px;border-radius: 0px;line-height: initial;}
+    div.js-ticket-search-form-btn-wrp-download button.js-reset-button {float: left;width: calc(100% / 2 - 10px);padding: 12px 0px;height: 50px;text-align: center;margin: 0px 0px 0px 10px;border-radius: 0px;line-height: initial;}
+    div.js-ticket-downloads-wrp{padding: 0px;}
+	select ::-ms-expand {display:none !important;}
+	select{-webkit-appearance:none !important;}

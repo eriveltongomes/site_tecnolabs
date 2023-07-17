@@ -1,0 +1,11 @@
+.form-horizontal .tab-content > .tab-pane.active{
+	background: url('../logo.png') center center no-repeat;
+	min-height: 700px;
+}
+
+span.settings label {
+	font-size: 22px;
+	color: #333;
+	text-align: center;
+	margin-top: 30px;
+}

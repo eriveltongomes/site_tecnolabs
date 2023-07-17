@@ -1,0 +1,30 @@
+/* Add Departments */
+	form.js-ticket-form{display:inline-block; width: 100%; padding: 10px;}
+	div.js-ticket-add-form-wrapper{float: left;width: 100%;}
+	div.js-ticket-add-form-wrapper div.js-ticket-from-field-wrp{float: left;width: calc(100% / 2 - 10px);margin: 0px 5px; margin-bottom: 20px; }
+	div.js-ticket-add-form-wrapper div.js-ticket-from-field-wrp.js-ticket-from-field-wrp-full-width{float: left;width: calc(100% / 1 - 10px); margin-bottom: 20px; }
+	div.js-ticket-add-form-wrapper div.js-ticket-from-field-wrp div.js-ticket-from-field-title{float: left;width: 100%;margin-bottom: 5px;}
+	div.js-ticket-add-form-wrapper div.js-ticket-from-field-wrp div.js-ticket-from-field{float: left;width: 100%;}
+	div.js-ticket-add-form-wrapper div.js-ticket-from-field-wrp div.js-ticket-from-field input.js-ticket-form-field-input{float: left;width: 100%;border-radius: 0px;padding: 10px;height: 50px;line-height: initial;}
+	div.js-ticket-add-form-wrapper div.js-ticket-from-field-wrp div.js-ticket-from-field select.js-ticket-form-field-select{float: left;width: 100%;border-radius: 0px; min-height:50px;background-image: url(../../../include/images/selecticon.png);background-repeat: no-repeat;background-position: calc(100% - 12px);-webkit-appearance: none;-moz-appearance: none;appearance: none;background-size: 13px;padding: 10px; }
+    div.js-ticket-radio-btn-wrp{float: left;width: 100%;padding: 10px;height: 40px;}
+	div.js-ticket-add-form-wrapper div.js-ticket-from-field-wrp div.js-ticket-from-field .jsst-formfield-radio-button-wrap {display: inline-block;margin-right: 10px;}
+	div.js-ticket-add-form-wrapper div.js-ticket-from-field-wrp div.js-ticket-from-field .jsst-formfield-radio-button-wrap label {margin-left: 3px;}
+	div.jsst-formfield-radio-button-wrap input.js-ticket-form-field-radio-btn{margin:right: 5px; vertical-align: middle;width: auto;display: inline-block;}
+	div.jsst-formfield-radio-button-wrap label {display: inline-block;}
+	div.js-ticket-radio-btn-wrp label#forsendmail{margin: 0px;display: inline-block; margin-right: 30px;}
+	div.js-ticket-form-btn-wrp{float: left;width:calc(100% - 20px);margin: 0px 10px;text-align: center;padding: 25px 0px 10px 0px;}
+	div.js-ticket-form-btn-wrp input.js-ticket-save-button{padding: 15px 10px;margin-right: 10px;min-width: 120px;border-radius: 0px;}
+	div.js-ticket-form-btn-wrp a.js-ticket-cancel-button {display: inline-block;padding: 15px 10px;min-width: 120px;border-radius: 0px;line-height: initial;text-decoration: none;}
+	div.js-ticket-append-signature-wrp{float: left;width: calc(100% / 2 - 30px); margin:0 15px;margin-bottom: 20px;} 
+	div.js-ticket-append-signature-wrp.js-ticket-append-signature-wrp-full-width{width: 100%;} 
+	div.js-ticket-append-signature-wrp div.js-ticket-append-field-title{float: left;width: 100%;margin-bottom: 15px;}
+	input.js-ticket-append-radio-btn {vertical-align: top;margin-right: 2px !important;}
+	div.js-ticket-append-signature-wrp div.js-ticket-append-field-wrp{float: left;width: 100%;} 
+	div.js-ticket-append-signature-wrp div.js-ticket-signature-radio-box{float: left;width: calc(100% / 3 - 10px);margin: 0px 5px;padding: 11px;} 
+	div.js-ticket-append-signature-wrp div.js-ticket-signature-radio-box.js-ticket-signature-radio-box-full-width {width: 100%;margin: 0;padding: 10px;line-height: initial;height: 50px;}
+	div.js-ticket-append-signature-wrp div.js-ticket-signature-radio-box label#forcanappendsignature{margin: 0px;display: inline-block;padding-top: 2px;} 
+	span.help-block{font-size:11px;}
+	span.help-block{color:red;}
+	select ::-ms-expand {display:none !important;}
+	select{-webkit-appearance:none !important;}

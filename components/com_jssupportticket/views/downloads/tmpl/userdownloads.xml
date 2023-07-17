@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="User Downloads">
+		<message>
+			<![CDATA[User Downloads.]]>
+		</message>
+	</layout>
+	<state>
+		<name>User Downloads</name>
+		<description>User Downloads.</description>
+	</state>
+</metadata>

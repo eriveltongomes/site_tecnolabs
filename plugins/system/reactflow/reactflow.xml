@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="system" method="upgrade">
+	<name>Reactflow</name>
+	<author>Armin Nikdel</author>
+	<creationDate>August 04, 2019</creationDate>
+	<copyright>Copyright (C) 2019 Reactflow. All Rights Reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>sales@reactflow.com</authorEmail>
+	<authorUrl>reactflow.com</authorUrl>
+	<version>1.00</version>
+	<description>Convert your prospects into customers. Reactflow highlights visual and logical reason why your visitors are not turning into customers, Optimize conversion, and ensure a seamless sales funnel to gain faster ROI.</description>
+	<files>
+		<filename plugin="reactflow">reactflow.php</filename>
+		<filename plugin="reactflow">index.html</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">	
+				<field name="reactflowtrackingid" type="text" default="" label="Reactflow Tracking Code Site ID:" description="Please add your website to reactflow.com and look at your tracking code. Enter Number you see in inside cdnflow.co/js/{NUMBER}.js here."  />
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+    	<server type="extension" priority="1" name="Reactflow Updates">https://reactflow.com/plugin/joomla.xml</server>
+ 	</updateservers>
+</extension>

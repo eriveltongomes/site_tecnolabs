@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" client="administrator" type="plugin" group="system" method="upgrade">
+    <name>Rapi Admin UI</name>
+    <author>RapiCode</author>
+    <creationDate>2020</creationDate>
+    <copyright>Copyright (C) 2020 All rights reserved.</copyright>
+    <license>GNU General Public License</license>
+    <authorEmail>info@rapicode.com</authorEmail>
+	<version>1.1</version>
+    <description>Rapi Admin UI - A simple and functional plugin for editing Joomla Admin UI</description>
+    <files>
+        <filename plugin="rapi_admin_ui">rapi_admin_ui.php</filename>
+		<filename>index.html</filename>
+		<folder>js</folder>
+		<folder>css</folder>
+        <folder>images</folder>
+    </files>
+    <config><fields name="params"><fieldset name="basic">
+
+        <field name="login_background_color" type="color" default="#1a3867" label="Login Body Background Color"/>
+
+        <field name="login_opacity" type="text" default="0.7" label="Login Form Opacity" description="Between 0 - 1"/>
+
+        <field name="login_form_background_color" type="color" default="#ffffff" label="Login Form Background Color"/>
+
+        <field name="login_form_button_background" type="list" default="info" label="Login Form Button Background">
+            <option value="default">Default</option>
+            <option value="success">Green</option>
+            <option value="info">Blue</option>
+            <option value="warning">Orange</option>
+            <option value="danger">Red</option>
+        </field>
+
+        <field name="login_form_button_color" type="color" default="#ffffff" label="Login Form Button Text Color"/>
+        <field name="login_form_button_radius" type="text" default="4" label="Login Form Button Border Radius"/>
+
+        <field name="background_effect" type="list" default="ripples" label="Login Background Effect">
+            <option value="none">None</option>
+            <option value="ripples">Ripples</option>
+            <option value="particleground">Particle Ground</option>
+        </field>
+
+        <field name="login_background_image" type="media" label="Login Background Image" description="" directory="images"/>
+
+        <field name="medium_logo" type="media" label="Medium Logo" description="" directory="images"/>
+
+        <field name="small_logo" type="media" label="Small Logo" description="" directory="images"/>
+
+        <field name="font_family" type="list" default="Oswald" label="Font Family" description="Select Admin Font Family">
+            <option value="default">Default</option>
+            <option value="Open Sans">Open Sans</option>
+            <option value="Lato">Lato</option>
+            <option value="Oswald">Oswald</option>
+            <option value="Raleway">Raleway</option>
+            <option value="Source Sans Pro">Source Sans Pro</option>
+            <option value="Roboto">Roboto</option>
+            <option value="Dancing Script">Dancing Script</option>
+            <option value="Gloria Hallelujah">Gloria Hallelujah</option>
+            <option value="Rokkitt">Rokkitt</option>
+            <option value="Cinzel">Cinzel</option>
+            <option value="Josefin Slab">Josefin Slab</option>
+            <option value="Teko">Teko</option>
+        </field>
+
+        <field name="transition" type="radio" class="btn-group btn-group-yesno" default="1" label="Transition Effect Between Pages">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </field>
+
+        <field name="inclass" type="list" default="fade-in" label="inClass" description="inClass Effect">
+            <option value="fade-in">fade-in</option>
+            <option value="fade-in-down-sm">fade-in-down-sm</option>
+            <option value="fade-in-down">fade-in-down</option>
+            <option value="fade-in-down-lg">fade-in-down-lg</option>
+            <option value="fade-in-up-sm">fade-in-up-sm</option>
+            <option value="fade-in-up">fade-in-up</option>
+            <option value="fade-in-up-lg">fade-in-up-lg</option>
+            <option value="fade-in-left-sm">fade-in-left-sm</option>
+            <option value="fade-in-left">fade-in-left</option>
+            <option value="fade-in-left-lg">fade-in-left-lg</option>
+            <option value="fade-in-right-sm">fade-in-right-sm</option>
+            <option value="fade-in-right">fade-in-right</option>
+            <option value="fade-in-right-lg">fade-in-right-lg</option>
+            <option value="rotate-in-sm">rotate-in-sm</option>
+            <option value="rotate-in">rotate-in</option>
+            <option value="rotate-in-lg">rotate-in-lg</option>
+            <option value="flip-in-x-fr">flip-in-x-fr</option>
+            <option value="flip-in-x">flip-in-x</option>
+            <option value="flip-in-x-nr">flip-in-x-nr</option>
+            <option value="flip-in-y-fr">flip-in-y-fr</option>
+            <option value="flip-in-y">flip-in-y</option>
+            <option value="flip-in-y-nr">flip-in-y-nr</option>
+            <option value="zoom-in-sm">zoom-in-sm</option>
+            <option value="zoom-in">zoom-in</option>
+            <option value="zoom-in-lg">zoom-in-lg</option>
+        </field>
+
+        <field name="outclass" type="list" default="fade-out" label="outClass" description="outClass Effect">
+            <option value="fade-out">fade-out</option>
+            <option value="fade-out-down-sm">fade-out-down-sm</option>
+            <option value="fade-out-down">fade-out-down</option>
+            <option value="fade-out-down-lg">fade-out-down-lg</option>
+            <option value="fade-out-up-sm">fade-out-up-sm</option>
+            <option value="fade-out-up">fade-out-up</option>
+            <option value="fade-out-up-lg">fade-out-up-lg</option>
+            <option value="fade-out-left-sm">fade-out-left-sm</option>
+            <option value="fade-out-left">fade-out-left</option>
+            <option value="fade-out-left-lg">fade-out-left-lg</option>
+            <option value="fade-out-right-sm">fade-out-right-sm</option>
+            <option value="fade-out-right">fade-out-right</option>
+            <option value="fade-out-right-lg">fade-out-right-lg</option>
+            <option value="rotate-out-sm">rotate-out-sm</option>
+            <option value="rotate-out">rotate-out</option>
+            <option value="rotate-out-lg">rotate-out-lg</option>
+            <option value="flip-out-x-fr">flip-out-x-fr</option>
+            <option value="flip-out-x">flip-out-x</option>
+            <option value="flip-out-x-nr">flip-out-x-nr</option>
+            <option value="flip-out-y-fr">flip-out-y-fr</option>
+            <option value="flip-out-y">flip-out-y</option>
+            <option value="flip-out-y-nr">flip-out-y-nr</option>
+            <option value="zoom-out-sm">zoom-out-sm</option>
+            <option value="zoom-out">zoom-out</option>
+            <option value="zoom-out-lg">zoom-out-lg</option>
+        </field>
+
+        <field name="inDuration" type="text" default="1000" label="inDuration" />
+        <field name="outDuration" type="text" default="500" label="outDuration" />
+        <field name="preloader" type="radio" class="btn-group btn-group-yesno" default="0" label="Preloader" description="Preloader Enable or Disable">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </field>
+        <field name="preloader_svg" type="list" default="puff" label="Preloader Image">
+            <option value="audio">Audio</option>
+            <option value="ball-triangle">Ball Triangle</option>
+            <option value="bars">Bars</option>
+            <option value="circles">Circles</option>
+            <option value="grid">Grid</option>
+            <option value="hearts">Hearts</option>
+            <option value="oval">Oval</option>
+            <option value="puff">Puff</option>
+            <option value="rings">Rings</option>
+            <option value="spinning-circles">Spinning Circles</option>
+            <option value="tail-spin">Tail Spin</option>
+            <option value="three-dots">Three Dots</option>
+        </field>
+        <field name="preloader_color" type="color" default="#1a3867" label="Preloader Color" description="Preloader Background Color" />
+        <field name="preloader_radius" type="text" default="50%" label="Preloader Radius" description="Preloader Border Radius" />
+
+    </fieldset></fields></config>
+	<updateservers>
+    	<server type="extension" name="rapi_admin_ui" priority="1">http://www.rapicode.com/update/rapi_admin_ui.xml</server>
+    </updateservers>
+</extension>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <extension version="2.5" type="file" method="upgrade">
+      <name>RSForm!Pro Brazil - Portuguese Language Pack</name>
+      <version>1.0.0</version>
+      <creationDate>08 September 2016</creationDate>
+      <author>RSJoomla!</author>
+      <authorEmail></authorEmail>
+      <authorUrl></authorUrl>
+      <copyright>Copyright (C) 2016. All rights reserved.</copyright>
+      <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+      <description>RSForm!Pro Brazil - Portuguese Language Pack</description>
+      <fileset>
+          <!-- Admin component language folder for Joomla! 2.5-->
+       <files folder="admin25" target="administrator/language/pt-BR">
+         <filename>pt-BR.com_rsform.ini</filename>
+         <filename>pt-BR.com_rsform.sys.ini</filename>
+         <filename>pt-BR.plg_content_rsform.ini</filename>
+         <filename>pt-BR.plg_content_rsform.sys.ini</filename>
+         <filename>pt-BR.plg_system_rsform.ini</filename>
+		 <filename>pt-BR.plg_system_rsform.sys.ini</filename>
+         <filename>pt-BR.plg_system_rsfpakismet.ini</filename>
+         <filename>pt-BR.plg_system_rsfpakismet.sys.ini</filename>
+         <filename>pt-BR.plg_system_rsfpconstantcontact.ini</filename>
+         <filename>pt-BR.plg_system_rsfpconstantcontact.sys.ini</filename>
+		 <filename>pt-BR.plg_system_rsfpgoogle.ini</filename>
+         <filename>pt-BR.plg_system_rsfpgoogle.sys.ini</filename>
+         <filename>pt-BR.plg_system_rsfpmailchimp.ini</filename>
+         <filename>pt-BR.plg_system_rsfpmailchimp.sys.ini</filename>
+         <filename>pt-BR.plg_system_rsfpofflinepayment.ini</filename>
+		 <filename>pt-BR.plg_system_rsfpofflinepayment.sys.ini</filename>
+         <filename>pt-BR.plg_system_rsfppayment.ini</filename>
+         <filename>pt-BR.plg_system_rsfppayment.sys.ini</filename>
+         <filename>pt-BR.plg_system_rsfppaypal.ini</filename>
+         <filename>pt-BR.plg_system_rsfppaypal.sys.ini</filename>
+		 <filename>pt-BR.plg_system_rsfppdf.ini</filename>
+         <filename>pt-BR.plg_system_rsfppdf.sys.ini</filename>
+         <filename>pt-BR.plg_system_rsfprecaptcha.ini</filename>
+         <filename>pt-BR.plg_system_rsfprecaptcha.sys.ini</filename>
+         <filename>pt-BR.plg_system_rsfpregistration.ini</filename>
+		 <filename>pt-BR.plg_system_rsfpregistration.sys.ini</filename>
+         <filename>pt-BR.plg_system_rsfprseventspro.ini</filename>
+         <filename>pt-BR.plg_system_rsfprseventspro.sys.ini</filename>
+         <filename>pt-BR.plg_system_rsfprsmail.ini</filename>
+         <filename>pt-BR.plg_system_rsfprsmail.sys.ini</filename>
+		 <filename>pt-BR.plg_system_rsfpsalesforce.ini</filename>
+         <filename>pt-BR.plg_system_rsfpsalesforce.sys.ini</filename>
+         <filename>pt-BR.plg_system_rsfpvtiger.ini</filename>
+         <filename>pt-BR.plg_system_rsfpvtiger.sys.ini</filename>
+         <filename>pt-BR.plg_system_rsfpbfforms.ini</filename>
+         <filename>pt-BR.plg_system_rsfpbfforms.sys.ini</filename>
+         <filename>pt-BR.plg_system_rsfprecaptchav2.ini</filename>
+         <filename>pt-BR.plg_system_rsfprecaptchav2.sys.ini</filename>
+         <filename>pt-BR.plg_system_rsfpzohocrm.ini</filename>
+         <filename>pt-BR.plg_system_rsfpzohocrm.sys.ini</filename>
+		 <filename>pt-BR.plg_system_rsfpdotmailer.ini</filename>
+         <filename>pt-BR.plg_system_rsfpdotmailer.sys.ini</filename>
+		 <filename>pt-BR.plg_system_rsfpgoogle-tracker.ini</filename>
+		 <filename>pt-BR.plg_system_rsfpgoogle-tracker.sys.ini</filename>
+		 <filename>pt-BR.plg_system_rsfpmailer.ini</filename>
+		 <filename>pt-BR.plg_system_rsfpmailer.sys.ini</filename>
+		 <filename>pt-BR.plg_system_rsfppagseguropayment.ini</filename>
+		 <filename>pt-BR.plg_system_rsfppagseguropayment.sys.ini</filename>
+		 <filename>pt-BR.plg_system_rsfppayfast.ini</filename>
+		 <filename>pt-BR.plg_system_rsfppayfast.sys.ini</filename>
+		 <filename>pt-BR.plg_system_rsfpcampaignmonitor.ini</filename>
+		 <filename>pt-BR.plg_system_rsfpcampaignmonitor.sys.ini</filename>
+		 <filename>pt-BR.plg_system_rsfpconstantcontact.ini</filename>
+		 <filename>pt-BR.plg_system_rsfpconstantcontact.sys.ini</filename>
+		 <filename>pt-BR.plg_system_rsfpgetresponse.ini</filename>
+		 <filename>pt-BR.plg_system_rsfpgetresponse.sys.ini</filename>
+		 <filename>pt-BR.plg_system_rsfpverticalresponse.ini</filename>
+		 <filename>pt-BR.plg_system_rsfpverticalresponse.sys.ini</filename>
+		 <filename>pt-BR.plg_system_rsfpauthorizenet.ini</filename>
+		 <filename>pt-BR.plg_system_rsfpauthorizenet.sys.ini</filename>
+		 <filename>pt-BR.plg_system_rsfpsignature.ini</filename>
+		 <filename>pt-BR.plg_system_rsfpsignature.sys.ini</filename>
+		 
+       </files>
+          <!-- Site component language folder  for Joomla! 2.5-->
+      <files folder="site25" target="language/pt-BR">
+         <filename>pt-BR.com_rsform.ini</filename>
+		 <filename>pt-BR.mod_rsform.ini</filename>
+         <filename>pt-BR.mod_rsform.sys.ini</filename>
+         <filename>pt-BR.mod_rsform_feedback.ini</filename>
+         <filename>pt-BR.mod_rsform_feedback.sys.ini</filename>
+         <filename>pt-BR.mod_rsform_list.ini</filename>
+		 <filename>pt-BR.mod_rsform_list.sys.ini</filename>
+       </files>
+      </fileset>
+  </extension>

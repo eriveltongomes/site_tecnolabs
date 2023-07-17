@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <extension version="2.5" type="file" method="upgrade">
+      <name>RSFirewall! Portuguese(Brazil) Language Pack</name>
+      <version>1.0.0</version>
+      <creationDate>27 April 2015</creationDate>
+      <author>RSJoomla!</author>
+      <authorEmail></authorEmail>
+      <authorUrl></authorUrl>
+      <copyright>Copyright (C) 2015. All rights reserved.</copyright>
+      <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+      <description>RSFirewall! Portuguese(Brazil) Language Pack</description>
+      <fileset>
+          <!-- Admin component language folder for Joomla! 2.5-->
+		  <files folder="admin25" target="administrator/language/pt-BR">
+			<filename>pt-BR.com_rsfirewall.ini</filename>
+			<filename>pt-BR.com_rsfirewall.sys.ini</filename>
+			<filename>pt-BR.mod_rsfirewall.ini</filename>
+			<filename>pt-BR.mod_rsfirewall.sys.ini</filename>
+			<filename>pt-BRR.plg_system_rsfirewall.sys.ini</filename>
+		  </files>
+          <!-- Site component language folder  for Joomla! 2.5-->
+		  <files folder="site25" target="language/pt-BR">
+			<filename>pt-BR.com_rsfirewall.ini</filename>
+			<filename>pt-BR.mod_rsfirewall_protected.ini</filename>
+			<filename>pt-BR.mod_rsfirewall_protected.sys.ini</filename>
+		  </files>
+      </fileset>
+  </extension>

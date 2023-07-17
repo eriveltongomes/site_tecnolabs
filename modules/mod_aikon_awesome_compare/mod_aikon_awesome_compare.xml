@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.0"
+	client="site"
+	method="upgrade">	
+	<name>aikon Awesome Compare</name>
+	<author>aikon CMS</author>
+	<creationDate>October 2014</creationDate>
+	<copyright>Copyright (C) 2014 aikon CMS. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>info@aikoncms.com</authorEmail>
+	<authorUrl>www.aikoncms.oom</authorUrl>
+	<version>1.2</version>
+	<description>
+        The most awesome way to display differences between products or services available, both beautiful and efficient!
+	</description>
+	<files>
+		<filename module="mod_aikon_awesome_compare">mod_aikon_awesome_compare.php</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+		<folder>fields</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_aikon_awesome_compare.xml</filename>
+	</files>
+
+    <!-- Runs on install/uninstall/update; New in 2.5 -->
+    <scriptfile>script.php</scriptfile>
+
+	<languages>
+		<language tag="en-GB">en-GB.mod_aikon_awesome_compare.ini</language>
+		<language tag="en-GB">en-GB.mod_aikon_awesome_compare.sys.ini</language>
+	</languages>
+
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_UNITE_RESPONSIVE_TILEGALLERY" />
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_aikon_awesome_compare/fields">
+				<fieldset name="basic">
+
+				<field name="styler" type="styler" label="styler" description="adds style to module backend"   />
+
+					
+				<field
+					name="basicSettings"
+					type="spacer"
+					class="settings"
+					label="MOD_AIKON_AWESOME_COMPARE_BASIC_SETTINGS"
+					   />
+					
+				<field
+					name="img1"
+					type="media"
+					directory="stories"
+					label="MOD_AIKON_AWESOME_COMPARE_FIELD_IMAGE1_LABEL"
+					description="MOD_AIKON_AWESOME_COMPARE_FIELD_IMAGE1_DSC"/>
+
+                <field name="alt1"
+                       type="text"
+                       filter="string"
+                       label="MOD_AIKON_AWESOME_COMPARE_FIELD_ALT1_LABEL" />
+
+                <field name="title1"
+                       type="text"
+                       filter="string"
+                       label="MOD_AIKON_AWESOME_COMPARE_FIELD_TITLE1_LABEL" />
+                    
+				<field
+					name="img2"
+					type="media"
+					directory="stories"
+					label="MOD_AIKON_AWESOME_COMPARE_FIELD_IMAGE2_LABEL"
+					description="MOD_AIKON_AWESOME_COMPARE_FIELD_IMAGE2_DSC"/>
+
+                <field name="alt2"
+                       type="text"
+                       filter="string"
+                       label="MOD_AIKON_AWESOME_COMPARE_FIELD_ALT2_LABEL" />
+
+                <field name="title2"
+                       type="text"
+                       filter="string"
+                       label="MOD_AIKON_AWESOME_COMPARE_FIELD_TITLE2_LABEL" />
+
+				<field
+					name="loadJquery"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="MOD_AIKON_AWESOME_COMPARE_FIELD_LOAD_JQUERY_LABEL"
+					description="MOD_AIKON_AWESOME_COMPARE_FIELD_LOAD_JQUERY_DSC">
+
+					<option	value="0">JNO</option>
+					<option	value="1">JYES</option>
+				</field>
+
+                <field
+                    name="loadJqueryMobile"
+                    type="radio"
+                    class="btn-group"
+                    default="1"
+                    label="MOD_AIKON_AWESOME_COMPARE_FIELD_LOAD_JQUERY_MOBILE_LABEL"
+                    description="MOD_AIKON_AWESOME_COMPARE_FIELD_LOAD_JQUERY_MOBILE_DSC">
+
+                    <option	value="0">JNO</option>
+                    <option	value="1">JYES</option>
+                </field>
+
+				<field
+					name="width"
+					type="text"
+					default="0"
+					label="MOD_AIKON_AWESOME_COMPARE_FIELD_WIDTH_LABEL"
+					description="MOD_AIKON_AWESOME_COMPARE_FIELD_WIDTH_DSC"
+					size="5"
+					filter="string" />
+					
+				 <field
+                        name="containerFloat"
+                        type="radio"
+                        class="btn-group"
+                        default="left"
+                        label="MOD_AIKON_AWESOME_COMPARE_FIELD_CONTAINER_FLOAT_LABEL"
+                        description="MOD_AIKON_AWESOME_COMPARE_FIELD_CONTAINER_FLOAT_DSC">
+                    <option	value="left">MOD_AIKON_AWESOME_COMPARE_LEFT</option>
+                    <option	value="none">MOD_AIKON_AWESOME_COMPARE_NONE</option>
+                    <option	value="right">MOD_AIKON_AWESOME_COMPARE_RIGHT</option>
+                </field>
+					
+
+			</fieldset>
+
+			<fieldset name="style" label="MOD_AIKON_AWESOME_COMPARE_FIELDSET_STYLE_LABEL">
+				
+			<field
+					name="handleSettings"
+					type="spacer"
+					class="settings"
+					label="MOD_AIKON_AWESOME_COMPARE_HANDLE_SETTINGS" />
+
+            <field
+                    name="handleType"
+                    type="ctrlfield"
+                    class="btn-group"
+                    default="theme"
+                    label="MOD_AIKON_AWESOME_COMPARE_FIELD_HANDLE_TYPE_LABEL"
+                    description="MOD_AIKON_AWESOME_COMPARE_FIELD_HANDLE_TYPE_DSC">
+                <option	value="css"
+                        enable="handleColor,handleColorActive,handleColorHover"
+                        disable="handleStyle" >
+                            MOD_AIKON_AWESOME_COMPARE_CSS_BASED
+                </option>
+                <option	value="theme"
+                        enable="handleStyle"
+                        disable="handleColor,handleColorActive,handleColorHover" >
+                            MOD_AIKON_AWESOME_COMPARE_THEME_BASED
+                </option>
+            </field>
+
+				<field
+					name="handleStyle"
+					type="list"
+					class="btn-group"
+					default="handle1"
+					label="MOD_AIKON_AWESOME_COMPARE_FIELD_HANDLE_STYLE_LABEL"
+					description="MOD_AIKON_AWESOME_COMPARE_FIELD_HANDLE_STYLE_DSC">
+					<option	value="handle1">handle1</option>
+					<option	value="handle2">handle2</option>
+					<option	value="handle3">handle3</option>
+					<option	value="handle4">handle4</option>
+					<option	value="handle5">handle5</option>
+				</field>
+
+
+                <field
+                        name="handleColor"
+                        type="color"
+                        default="#181818"
+                        label="MOD_AIKON_AWESOME_COMPARE_FIELD_HANDLE_COLOR_LABEL"
+                        description="MOD_AIKON_AWESOME_COMPARE_FIELD_HANDLE_COLOR_DSC" />
+
+                <field
+                        name="handleColorActive"
+                        type="color"
+                        default="#000"
+                        label="MOD_AIKON_AWESOME_COMPARE_FIELD_HANDLE_COLOR_ACTIVE_LABEL"
+                        description="MOD_AIKON_AWESOME_COMPARE_FIELD_HANDLE_COLOR_ACTIVE_DSC" />
+				
+				
+				                <field
+                        name="handleColorHover"
+                        type="color"
+                        default="#666"
+                        label="MOD_AIKON_AWESOME_COMPARE_FIELD_HANDLE_COLOR_HOVER_LABEL"
+                        description="MOD_AIKON_AWESOME_COMPARE_FIELD_HANDLE_COLOR_HOVER_DSC" />
+
+
+				<field
+					name="compareSettings"
+					type="spacer"
+					class="settings"
+					label="MOD_AIKON_AWESOME_COMPARE_COMPARE_SETTINGS"
+					   />
+				
+				<field
+					name="shadowSize"
+					type="radio"
+					class="btn-group"
+					default="0px 0px 0px 0px"
+					label="MOD_AIKON_AWESOME_COMPARE_FIELD_SHADOW_SIZE_LABEL"
+					description="MOD_AIKON_AWESOME_COMPARE_FIELD_SHADOW_SIZE_DSC">
+					<option	value="0px 0px 0px 0px">MOD_AIKON_AWESOME_COMPARE_NONE</option>
+					<option	value="0px 0px 3px 1px">MOD_AIKON_AWESOME_COMPARE_SMALL</option>
+					<option	value="0px 0px 5px 2px">MOD_AIKON_AWESOME_COMPARE_MEDIUM</option>
+					<option	value="0px 0px 10px 4px">MOD_AIKON_AWESOME_COMPARE_LARGE</option>	
+				</field>
+				
+
+				<field 
+					name="shadowColor"
+					type="color"
+					default="#1d1d1d"
+					label="MOD_AIKON_AWESOME_COMPARE_FIELD_SHADOW_COLOR_LABEL"
+					description="MOD_AIKON_AWESOME_COMPARE_FIELD_SHADOW_COLOR_DSC" />	
+					
+				<field
+					name="borderSize"
+					type="radio"
+					class="btn-group"
+					default="0px"
+					label="MOD_AIKON_AWESOME_COMPARE_FIELD_BORDER_SIZE_LABEL"
+					description="MOD_AIKON_AWESOME_COMPARE_FIELD_BORDER_SIZE_DSC">
+					<option	value="0px">MOD_AIKON_AWESOME_COMPARE_NONE</option>
+					<option	value="1px">MOD_AIKON_AWESOME_COMPARE_THIN</option>
+					<option	value="3px">MOD_AIKON_AWESOME_COMPARE_MEDIUM</option>
+					<option	value="5px">MOD_AIKON_AWESOME_COMPARE_THICK</option>
+				</field>	
+				
+				<field 
+					name="borderColor"
+					type="color"
+					default="#1d1d1d"
+					label="MOD_AIKON_AWESOME_COMPARE_FIELD_BORDER_COLOR_LABEL"
+					description="MOD_AIKON_AWESOME_COMPARE_FIELD_BORDER_COLOR_DSC" />
+
+				<field 
+					name="borderRadius"
+					type="text"
+					default="0"
+					label="MOD_AIKON_AWESOME_COMPARE_FIELD_BORDER_RADIUS_LABEL"
+					description="MOD_AIKON_AWESOME_COMPARE_FIELD_BORDER_RADIUS_DSC"
+					size="5"
+					filter="int" />
+
+
+			</fieldset>
+
+            <fieldset name="advanced">
+
+
+                <field
+                        name="moduleclass_sfx"
+                        type="textarea" rows="3"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+            </fieldset>
+
+
+		</fields>
+	</config>
+</extension>
